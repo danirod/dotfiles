@@ -1,0 +1,63 @@
+# Dani's .conkyrc settings file for Conky
+# Hacked from original .conkyrc settings file
+
+background yes
+use_xft yes
+xftfont Monospace:size=10
+xftalpha 1
+update_interval 0.5
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+#own_window_argb_visual yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+maximum_width 360
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color dedede
+default_shade_color 000000
+default_outline_color 828282
+alignment top_right
+gap_x 25
+gap_y 50
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+
+######################
+# OUTPUT STARTS HERE #
+######################
+
+TEXT
+# Time and date
+${font Monospace:size=28}${alignc}${time %H:%M:%S}${font}
+${font Monospace:size=16}${alignc}${time %d/%m/%Y}${font}
+
+# System information
+${font Monospace:bold:size=12}SYSTEM ${hr 2}${font}
+Kernel:$alignr${kernel}
+Uptime:$alignr$uptime
+
+# CPU usage percentages as a bar
+${font Monospace:bold:size=12}CPU ${hr 2}${font}
+CPU 0:$alignr${voffset 1}${cpubar cpu0 8,140}
+CPU 1:$alignr${voffset 1}${cpubar cpu1 8,140}
+
+# Network information: displays link speed and acumulated values
+${font Monospace:bold:size=12}NETWORK ${hr 2}${font}
+Up:   ${upspeed wlan0} ${alignr}${upspeedgraph wlan0 8,60}
+Down: ${downspeed wlan0} ${alignr}${downspeedgraph wlan0 8,60}
+Total Up:${alignr}${totalup wlan0}
+Total Down:${alignr}${totaldown wlan0}
+
+# Next section shows up some usage information about RAM and hard drives.
+# Information is displayed as a number which shows the used space and a bar.
+${font Monospace:bold:size=12}STORAGE ${hr 2}${font}
+RAM:$alignr $mem ${membar 8,60}
+Hard Drive: $alignr${fs_used /} ${fs_bar 8,60 /}
+Media: $alignr${fs_used /media/Archivos/} ${fs_bar 8,60 /media/Archivos/}
