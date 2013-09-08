@@ -1,0 +1,31 @@
+[user]
+	email = danirod@outlook.com
+	name = Dani Rodríguez
+
+
+[alias]
+        # 99.9% times I review the log I use it this way. It makes sense.
+        lod = log --oneline --decorate --color
+
+# The following code is not mine.
+# Taken from http://www.kunday.com/post/29594688306/git-config-hacks
+[color]
+        branch = auto
+        diff = auto
+        status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
