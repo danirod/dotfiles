@@ -1,7 +1,7 @@
 " Dani's .vimrc file
 
-" Syntax color.
-syntax on
+syntax on       " enable syntax colouring on source code files
+set number      " show line numbers at the left (extremely useful!)
 
 " 4-space indenting.
 set autoindent " autoindent: inherit indenting from last line
