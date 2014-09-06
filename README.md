@@ -20,3 +20,6 @@ folders.
 4. Sharing: somebody may consider this useful for taking some things or even
    for learning new configurations.
 
+## License
+As stated in LICENSE file, these dotfiles are covered by MIT License.
+Copyright (C) 2013-2014 Dani Rodríguez <danirod@outlook.com>
