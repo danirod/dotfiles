@@ -1,1 +1,2 @@
-/Users/danirod/.octaverc
+setenv ("GNUTERM", "X11")
+
