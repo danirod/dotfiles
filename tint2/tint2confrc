@@ -1,7 +1,0 @@
-#---------------------------------------------
-# TINT2CONF CONFIG FILE
-default_theme = /home/danirod/.config/tint2/default.tint2rc
-cmd_property = python2 /usr/bin/tintwizard.py
-width = 500
-height = 350
-
