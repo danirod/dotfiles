@@ -2,6 +2,11 @@
 # You may place a similar script in $HOME/.config/openbox/autostart
 # to run user-specific things.
 
-conky &
+# Execute the tint2 taskbar.
 tint2 &
-xsetroot -solid "#073642" &
+
+# Execute fehbg to restore current background.
+~/.fehbg &
+
+# Execute conky
+conky &

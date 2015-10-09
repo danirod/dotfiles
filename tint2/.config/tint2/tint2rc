@@ -1,32 +1,46 @@
-# Background definitions
-# ID 1
-rounded = 0
-border_width = 0
-background_color = #657b83 100
-border_color = #FFFFFF 16
+# Background definitions. Based on Numix colors.
 
-# ID 2
+# ID 1: Numix red
 rounded = 0
 border_width = 0
-background_color = #fdf6e3 100
-border_color = #fdfe63 48
+background_color = #d64937 100
+border_color = #000000 0
 
-# ID 3
+# ID 2: Numix gray
 rounded = 0
 border_width = 0
-background_color = #93a1a1 100
-border_color = #FFFFFF 68
+background_color = #dedede 100
+border_color = #000000 0
+
+# ID 3: Numix white
+rounded = 0
+border_width = 0
+background_color = #dedede 100 
+border_color = #000000 0
+
+# ID 4: Numix dark gray
+rounded = 0
+border_width = 0
+background_color = #333333 100
+border_color = #000000 0
+
+# ID 5: Numix black
+rounded = 0
+border_width = 0
+background_color = #2d2d2d 100
+border_color = #000000 0
 
 # Panel
+panel_items = LTSBC
 panel_monitor = all
 panel_position = bottom center horizontal
-panel_size = 100% 30
+panel_size = 100% 24
 panel_margin = 0 0
-panel_padding = 7 0 7
+panel_padding = 0
 panel_dock = 0
 wm_menu = 0
 panel_layer = top
-panel_background_id = 1
+panel_background_id = 5
 
 # Panel Autohide
 autohide = 0
@@ -35,36 +49,44 @@ autohide_hide_timeout = 2
 autohide_height = 2
 strut_policy = follow_size
 
+# Launchers
+#launcher_icon_theme = Faenza-Darker
+launcher_padding = 8 2
+launcher_background_id = 0
+laucnher_icon_size = 24
+launcher_item_app = /usr/share/applications/firefox.desktop
+launcher_item_app = /usr/share/applications/urxvt.desktop
+
 # Taskbar
 taskbar_mode = single_desktop
-taskbar_padding = 2 3 2
+taskbar_padding =  0 0 0
 taskbar_background_id = 0
 taskbar_active_background_id = 0
 
 # Tasks
 urgent_nb_of_blink = 8
-task_icon = 1
+task_icon = 0
 task_text = 1
-task_centered = 0
+task_centered = 1
 task_maximum_size = 200 35
-task_padding = 4 4
-task_background_id = 3
-task_active_background_id = 2
+task_padding = 4 2 
+task_background_id = 5
+task_active_background_id = 1
 task_urgent_background_id = 2
-task_iconified_background_id = 3
+task_iconified_background_id = 5
 
 # Task Icons
 task_icon_asb = 70 0 0
 task_active_icon_asb = 100 0 0
 task_urgent_icon_asb = 100 0 0
-task_iconified_icon_asb = 70 0 0
+task_iconified_icon_asb = 100 0 0
 
 # Fonts
-task_font = Terminus 9
-task_font_color = #002b36 68
-task_active_font_color = #002b36 83
-task_urgent_font_color = #002b36 83
-task_iconified_font_color = #002b36 68
+task_font = Profont 10
+task_font_color = #dedede 100
+task_active_font_color = #f9f9f9 100
+task_urgent_font_color = #333333 100
+task_iconified_font_color = #dedede 100
 font_shadow = 0
 
 # System Tray
@@ -76,13 +98,11 @@ systray_icon_size = 16
 systray_icon_asb = 70 0 0
 
 # Clock
-time1_format = %H:%M
-time1_font = Terminus 10
-time2_format = %a %d-%b
-time2_font = Terminus 8
-clock_font_color = #fdf6e3 100
-clock_padding = 1 0
-clock_background_id = 0
+time1_format = %a %d %H:%M
+time1_font = Profont 10
+clock_font_color = #dedede 100
+clock_padding = 8 2
+clock_background_id = 1
 clock_rclick_command = orage
 
 # Tooltips
