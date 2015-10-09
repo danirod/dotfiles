@@ -3,7 +3,7 @@
 
 background yes
 use_xft yes
-xftfont Profont:size=10
+xftfont Dina:size=9
 xftalpha 1
 update_interval 0.5
 total_run_times 0

@@ -83,7 +83,7 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 100 0 0
 
 # Fonts
-task_font = Profont 10
+task_font = Dina 9
 task_font_color = #dedede 100
 task_active_font_color = #f9f9f9 100
 task_urgent_font_color = #333333 100
@@ -100,7 +100,7 @@ systray_icon_asb = 70 0 0
 
 # Clock
 time1_format = %a %d %H:%M
-time1_font = Profont 10
+time1_font = Dina 9
 clock_font_color = #dedede 100
 clock_padding = 8 2
 clock_background_id = 1
