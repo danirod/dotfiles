@@ -1,4 +1,5 @@
 ! URXVT Terminal
+URxvt*geometry: 120x35
 URxvt*font: xft:Profont:medium:size=10
 URxvt*boldFont: xft:Profont:bold:size=10
 URxvt.intensityStyles: false

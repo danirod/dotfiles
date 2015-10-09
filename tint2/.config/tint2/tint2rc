@@ -34,7 +34,7 @@ border_color = #000000 0
 panel_items = LTSBC
 panel_monitor = all
 panel_position = bottom center horizontal
-panel_size = 100% 24
+panel_size = 100% 20
 panel_margin = 0 0
 panel_padding = 0
 panel_dock = 0
@@ -50,12 +50,13 @@ autohide_height = 2
 strut_policy = follow_size
 
 # Launchers
-#launcher_icon_theme = Faenza-Darker
+launcher_icon_theme = Faenza-Darker
 launcher_padding = 8 2
 launcher_background_id = 0
-laucnher_icon_size = 24
+laucnher_icon_size = 20
 launcher_item_app = /usr/share/applications/firefox.desktop
 launcher_item_app = /usr/share/applications/urxvt.desktop
+launcher_item_app = /usr/share/applications/gvim.desktop
 
 # Taskbar
 taskbar_mode = single_desktop
