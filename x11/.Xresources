@@ -1,7 +1,7 @@
 ! URXVT Terminal
 URxvt*geometry: 120x35
-URxvt*font: xft:Dina:medium:size=9
-URxvt*boldFont: xft:Dina:bold:size=9
+URxvt*font: xft:GohuFont:medium:size=10
+URxvt*boldFont: xft:GohuFont:bold:size=10
 URxvt.intensityStyles: false
 URxvt.scrollBar: false
 

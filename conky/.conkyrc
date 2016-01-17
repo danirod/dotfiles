@@ -3,7 +3,7 @@
 
 background yes
 use_xft yes
-xftfont Dina:size=9
+xftfont GohuFont:size=10
 xftalpha 1
 update_interval 0.5
 total_run_times 0
@@ -35,23 +35,25 @@ override_utf8_locale no
 
 TEXT
 # Time and date
-${font Profont:size=24}${alignc}${time %H:%M:%S}${font}
-${font Profont:size=18}${alignc}${time %d/%m/%Y}${font}
+#${font Profont:size=24}${alignc}${time %H:%M:%S}${font}
+#${font Profont:size=18}${alignc}${time %d/%m/%Y}${font}
 
 # System information
-${font Profont:bold:size=12}SYSTEM ${hr 2}${font}
+${font GohuFont:bold:size=10}SYSTEM ${hr 2}${font}
+Host:$alignr${nodename}
 Kernel:$alignr${kernel}
 Uptime:$alignr$uptime
+Proccesses:$alignr${processes}
 
 # CPU usage percentages as a bar
-${font Profont:bold:size=12}CPU ${hr 2}${font}
+${font GohuFont:bold:size=10}CPU ${hr 2}${font}
 CPU 0:$alignr${voffset 1}${cpubar cpu0 8,140}
 CPU 1:$alignr${voffset 1}${cpubar cpu1 8,140}
 CPU 2:$alignr${voffset 1}${cpubar cpu2 8,140}
 CPU 3:$alignr${voffset 1}${cpubar cpu3 8,140}
 
 # Network information: displays link speed and acumulated values
-${font Profont:bold:size=12}NETWORK ${hr 2}${font}
+${font GohuFont:bold:size=10}NETWORK ${hr 2}${font}
 Up:   ${upspeed enp0s3} ${alignr}${upspeedgraph enp0s3 8,60}
 Down: ${downspeed enp0s3} ${alignr}${downspeedgraph enp0s3 8,60}
 Total Up:${alignr}${totalup enp0s3}
@@ -59,7 +61,8 @@ Total Down:${alignr}${totaldown enp0s3}
 
 # Next section shows up some usage information about RAM and hard drives.
 # Information is displayed as a number which shows the used space and a bar.
-${font Profont:bold:size=12}STORAGE ${hr 2}${font}
+${font GohuFont:bold:size=10}STORAGE ${hr 2}${font}
 RAM:$alignr $mem ${membar 8,60}
+Swap:$alignr $swap ${swapbar 8,60}
 Hard Drive: $alignr${fs_used /} ${fs_bar 8,60 /}
 # Media: $alignr${fs_used /media/Archivos/} ${fs_bar 8,60 /media/Archivos/}

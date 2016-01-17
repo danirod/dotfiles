@@ -10,3 +10,5 @@ tint2 &
 
 # Execute conky
 conky &
+
+dropbox &
