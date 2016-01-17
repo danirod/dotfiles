@@ -2,7 +2,7 @@
 # These settings power my terminal.
 
 # Oh my ZSH configuration
-export ZSH=/Users/danirod/.oh-my-zsh
+export ZSH=$PWD/.oh-my-zsh
 ZSH_THEME="steeef"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
