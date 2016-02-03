@@ -2,16 +2,16 @@
 # These settings power my terminal.
 
 # Oh my ZSH configuration
-export ZSH=$PWD/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="steeef"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(git battery gradle)
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Home settings
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export GLASSFISH_HOME=/opt/glassfish4/glassfish
+export GLASSFISH_HOME=/opt/local/glassfish4/glassfish
 
 # Set up PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
