@@ -14,7 +14,7 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 
 # Set up PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-if [ -d $PWD/.bin ]; then export PATH="$PWD/.bin:$PATH"; fi
+if [ -d $HOME/.bin ]; then export PATH="$HOME/.bin:$PATH"; fi
 
 export LANG=es_ES.UTF-8
 export EDITOR=vim
