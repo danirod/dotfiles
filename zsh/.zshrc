@@ -11,7 +11,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Home settings
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export GLASSFISH_HOME=/opt/local/glassfish4/glassfish
 
 # Set up PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
