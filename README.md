@@ -42,8 +42,8 @@ the just cloned repository and start stowing the packages that you want.
     stow openbox
     stow tmux
 
-Note that `stow zsh` works because there is a directory named `stow` under
-`~/.dotfiles` and because the parent directory for `~/.dotfiles/` is already
+Note that `stow zsh` works because there is a directory named `zsh` at
+`~/.dotfiles` and because the parent directory for `~/.dotfiles/` is 
 $HOME. If you are cloning this repository into a different location you will
 need to change the target directory or you will get these dotfiles linked
 at wrong locations.
