@@ -23,6 +23,3 @@ export EDITOR=vim
 # Some applications like to set up their autostart scripts.
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 [ -f $NVM_HOME/nvm.sh ] && source $NVM_HOME/nvm.sh
-
-# This command might not be portable if open does not exist.
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
