@@ -12,7 +12,7 @@ function prompt {
     Write-Host $env:computername -nonewline -foregroundcolor yellow
     Write-Host " in " -nonewline -foregroundcolor white
     Write-Host $pwd -foregroundcolor green
-    Return "$ "
+    Return "> "
 }
 
 function Create-SymLink
