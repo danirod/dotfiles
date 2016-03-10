@@ -4,6 +4,12 @@
 # default and I don't understand why it isn't, even on Windows 10. Sigh.
 chcp 65001 > $null
 
+# Load private profile if it exists.
+$PrivateProfile = $(Split-Path -Parent $profile) + '\' + $env:computername + '.ps1'
+if (Test-Path -PathType Leaf $PrivateProfile) {
+    . $PrivateProfile
+}
+
 # Based on steeef theme from Oh-My-Zsh.
 function prompt {
     Write-Host -foregroundcolor white
