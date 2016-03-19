@@ -22,17 +22,6 @@ useful.
 
 ## Install
 
-### Requirements
-
-* **An UNIX based system**. This is not accurate since these dotfiles will
-  work on Windows too, but since Windows lacks symbolic links, the experience
-  won't be that great.
-* **GNU Stow**. This is the tool that will create symlinks in the system.
-  If you cannot use Stow, you'll have to manually create symlinks at their
-  appropiate locations.
-
-### Install
-
 Clone this repository in a location such as `~/.dotfiles`. Then, enter
 the just cloned repository and start stowing the packages that you want.
 
@@ -55,6 +44,7 @@ as **atom**, **bash** or **zsh** and they don't need further explanation.
 However, there are a few special packages:
 
 * **osx**: special settings for MacOS X.
+* **powershell**: special settings for Windows (PowerShell).
 * **ubuntu**: special settings for Ubuntu based systems.
 * **windows**: special settings for Windows (Cygwin / MSYS-NT).
 
