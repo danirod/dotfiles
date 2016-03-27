@@ -73,6 +73,7 @@ MAGENTA='\[\e[0;35m\]'
   BLACK='\[\e[0;30m\]'
 # more color constants to come... there are a f***ing lot of them.
 
+export EDITOR=vim
 
 #######################################################################
 # COMMON FUNCTIONS
