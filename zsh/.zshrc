@@ -13,9 +13,13 @@ source $ZSH/oh-my-zsh.sh
 export NVM_HOME=$HOME/.nvm
 export ANDROID_HOME=$HOME/Library/Android/sdk
 
+# Racer
+export RUST_SRC_PATH=/usr/local/src/rustc/src
+
 # Set up PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 if [ -d $HOME/.bin ]; then export PATH="$HOME/.bin:$PATH"; fi
+if [ -d $HOME/.cargo/bin ]; then export PATH="$HOME/.cargo/bin:$PATH"; fi
 
 export LANG=es_ES.UTF-8
 export EDITOR=vim
