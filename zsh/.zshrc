@@ -6,11 +6,12 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="steeef"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(git nvm)
+plugins=(git brew bundler osx rails ruby rvm)
 source $ZSH/oh-my-zsh.sh
 
 # Home settings
 export NVM_HOME=$HOME/.nvm
+export RVM_HOME=$HOME/.rvm
 export ANDROID_HOME=$HOME/Library/Android/sdk
 
 # Racer
@@ -27,3 +28,6 @@ export EDITOR=vim
 # Some applications like to set up their autostart scripts.
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 [ -f $NVM_HOME/nvm.sh ] && source $NVM_HOME/nvm.sh
+[ -f $RVM_HOME ] && source $RVM_HOME/scripts/rvm
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
