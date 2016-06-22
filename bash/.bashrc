@@ -93,3 +93,5 @@ cm_error() { tput setaf 1; echoerr "ERROR: $@"; tput sgr0; }
 
 # PS1 prompt
 PROMPT_COMMAND='PS1="\[\e]0;\u@\h:\w\a\]${GREEN}\w${RESET} \$ "'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
