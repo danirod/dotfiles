@@ -20,5 +20,4 @@ xrdb -merge ~/.Xresources
 # Set keyboard to Spanish
 setxkbmap es
 
-# Start Openbox
-exec openbox-session
+exec i3
