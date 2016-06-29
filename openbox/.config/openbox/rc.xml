@@ -314,10 +314,10 @@
     </keybind>
     <!-- Keybindings for running applications -->
     <keybind key="A-F2">
-        <action name="Execute">
-            <name>dmenu</name>
-            <command>dmenu_run</command>
-        </action>
+      <action name="Execute">
+        <name>dmenu</name>
+        <command>dmenu_run</command>
+      </action>
     </keybind>
     <keybind key="W-e">
       <action name="Execute">
