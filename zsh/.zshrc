@@ -28,6 +28,4 @@ export EDITOR=vim
 # Some applications like to set up their autostart scripts.
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 [ -f $NVM_HOME/nvm.sh ] && source $NVM_HOME/nvm.sh
-[ -f $RVM_HOME ] && source $RVM_HOME/scripts/rvm
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[ -f $RVM_HOME/scripts/rvm ] && source $RVM_HOME/scripts/rvm
