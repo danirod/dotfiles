@@ -1,56 +1,46 @@
 # i3 config file
 
 set $mod Mod1
-font pango:Terminus 10
-
-exec --no-startup-id ~/.fehbg
-exec --no-startup-id compton -b
-exec --no-startup-id nm-applet
+font pango:Fira Mono 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Return exec urxvt          # Start terminal on ENTER.
-bindsym $mod+Shift+q kill               # Kill window on Q.
-bindsym $mod+d exec dmenu_run -fn Terminus -nb '#2b303b' -nf '#eff1f5' -sb '#8fa1b3' -sf '#2b303b'
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Shift+q kill
+bindsym $mod+d exec dmenu_run -fn 'Fira Mono-10' -nb '#171717' -nf '#dedacf' -sb '#ddf88f' -sf '#000000'
 
-# A few windows can float.
+# Windows that can float
 for_window [class="Skype"] floating enable
 
-# change focus
+# Change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+ntilde focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
+# Moving windows
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+ntilde move right
+bindsym $mod+f fullscreen
 
-# alternatively, you can use the cursor keys:
+# Smelly alternatives
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
+# Splits
 bindsym $mod+h split h
-
-# split in vertical orientation
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen
-
-# change container layout (stacked, tabbed, toggle split)
+# Layouts
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
@@ -67,36 +57,48 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# workspaces
+set $ws1 "1 &#xf120;"
+set $ws2 "2 &#xf269;"
+set $ws3 "3 &#xf121;"
+set $ws4 "4 &#xf028;"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8 &#xf17e;"
+set $ws9 "9"
+set $ws10 "10"
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3' -b 'Exit' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -126,32 +128,33 @@ bindsym $mod+r mode "resize"
 
 # statusbar
 bar {
-        position top
+        font pango:Fira Mono, Awesome 10
+        position bottom
         mode dock
         status_command i3status
         tray_output primary
-        separator_symbol " ⬤ "
+        separator_symbol " / "
         height 19
 
         colors {
-                background  #2b303b
-                statusline  #eff1f5
-                separator   #666666
-
-                focused_workspace  #8fa1b3 #8fa1b3 #2b303b
-                active_workspace   #333333 #5f676a #eff1f5
-                inactive_workspace #8fa1b3 #2b303b #eff1f5
-                urgent_workspace  #2f343a #900000 #ffffff 
+            background  #171717
+            statusline  #dedacf
+            separator   #313131
+            focused_workspace   #ddf88f #ddf88f #000000
+            active_workspace    #171717 #171717 #dedacf
+            inactive_workspace  #171717 #171717 #dedacf
+            urgent_workspace    #2f343a #900000 #ffffff
         }
 }
 
 # Colors
 # class                             border      backgr.     text
-client.focused                      #8fa1b3     #8fa1b3     #111111 #8fa1b3
-client.unfocused                    #65737e     #65737e     #315858 #65737e
-client.focused_inactive             #65737e     #65737e     #315858 #65737e
-client.urgent                       #bf616a     #bf616a     #eff1f5 #bf616a
+client.focused                      #ddf88f     #ddf88f     #111111 #8fa1b3
+client.unfocused                    #171717     #171717     #315858 #65737e
+client.focused_inactive             #171717     #171717     #315858 #65737e
+client.urgent                       #ff615a     #ff615a     #eff1f5 #bf616a
 
 new_window pixel 5
 new_float pixel 5
 gaps inner 30
+gaps outer 30

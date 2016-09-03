@@ -20,4 +20,8 @@ xrdb -merge ~/.Xresources
 # Set keyboard to Spanish
 setxkbmap es
 
+~/.fehbg &
+compton -b &
+nm-applet &
+
 exec i3
