@@ -149,10 +149,10 @@ bar {
 
 # Colors
 # class                             border      backgr.     text
-client.focused                      #ddf88f     #ddf88f     #111111 #8fa1b3
-client.unfocused                    #171717     #171717     #315858 #65737e
-client.focused_inactive             #171717     #171717     #315858 #65737e
-client.urgent                       #ff615a     #ff615a     #eff1f5 #bf616a
+client.focused                      #ddf88f     #ddf88f     #111111 #ddf88f
+client.unfocused                    #171717     #171717     #315858 #171717
+client.focused_inactive             #171717     #171717     #315858 #171717
+client.urgent                       #ff615a     #ff615a     #eff1f5 #ff615a
 
 new_window pixel 5
 new_float pixel 5
