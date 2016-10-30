@@ -1,14 +1,20 @@
-# i3 config file
+#    █████
+# █ █     █     ████   ████  █    █ ██████ █  ████
+# █       █    █    █ █    █ ██   █ █      █ █    █
+# █  █████     █      █    █ █ █  █ █████  █ █
+# █       █    █      █    █ █  █ █ █      █ █  ███
+# █ █     █    █    █ █    █ █   ██ █      █ █    █
+# █  █████      ████   ████  █    █ █      █  ████
 
 set $mod Mod1
-font pango:Fira Mono 10
+font:pango Terminus 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec dmenu_run -fn 'Fira Mono-10' -nb '#171717' -nf '#dedacf' -sb '#ddf88f' -sf '#000000'
+bindsym $mod+d exec dmenu_run -fn 'Terminus-9' -nb '#002b36' -nf '#fdf6e3' -sb '#859900' -sf '#fdf6e3'
 
 # Windows that can float
 for_window [class="Skype"] floating enable
@@ -128,33 +134,33 @@ bindsym $mod+r mode "resize"
 
 # statusbar
 bar {
-        font pango:Fira Mono, Awesome 10
+        font pango:Terminus, Awesome 9
         position bottom
         mode dock
         status_command i3status
         tray_output primary
         separator_symbol " / "
-        height 19
+        height 17
 
         colors {
-            background  #171717
-            statusline  #dedacf
-            separator   #313131
-            focused_workspace   #ddf88f #ddf88f #000000
-            active_workspace    #171717 #171717 #dedacf
-            inactive_workspace  #171717 #171717 #dedacf
-            urgent_workspace    #2f343a #900000 #ffffff
+            background  #002b36
+            statusline  #93a1a1
+            separator   #657b83
+            focused_workspace   #859900 #859900 #fdf6e3
+            active_workspace    #002b36 #002b36 #93a1a1
+            inactive_workspace  #002b36 #002b36 #93a1a1
+            urgent_workspace    #dc322f #dc322f #fdf6e3
         }
 }
 
 # Colors
 # class                             border      backgr.     text
-client.focused                      #ddf88f     #ddf88f     #111111 #ddf88f
-client.unfocused                    #171717     #171717     #315858 #171717
-client.focused_inactive             #171717     #171717     #315858 #171717
-client.urgent                       #ff615a     #ff615a     #eff1f5 #ff615a
+client.focused                      #859900     #859900     #fdf6e3 #859900
+client.unfocused                    #002b36     #002b36     #93a1a1 #002b36
+client.focused_inactive             #002b36     #002b36     #93a1a1 #002b36
+client.urgent                       #dc322f     #dc322f     #fdf6e3 #dc322f
 
-new_window pixel 5
-new_float pixel 5
+new_window pixel 3
+new_float pixel 3
 gaps inner 30
 gaps outer 30
