@@ -1,18 +1,22 @@
 [user]
-	email = danirod@outlook.com
-	name = Dani Rodríguez
+    email = danirod@outlook.com
+    name = Dani Rodríguez
+
+[include]
+    path=~/.gitconfig.local
 
 [alias]
-        lod = log --oneline --decorate --color
-        co = checkout
-        ci = commit
+    lod = log --oneline --decorate --color
+    co = checkout
+    ci = commit
+    ap = add -p
+    am = commit --amend
+    unadd = reset HEAD --
 
-# The following code is not mine.
-# Taken from http://www.kunday.com/post/29594688306/git-config-hacks
 [color]
-        branch = auto
-        diff = auto
-        status = auto
+    branch = auto
+    diff = auto
+    status = auto
 
 [color "branch"]
     current = yellow reverse
