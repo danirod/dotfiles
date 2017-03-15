@@ -20,8 +20,9 @@ xrdb -merge ~/.Xresources
 # Set keyboard to Spanish
 setxkbmap es
 
-compton -b &
-hsetroot -solid `appres | grep background | awk '{ print $2 }'`
+command -v dropbox >/dev/null 2>&1 && dropbox start &
+command -v compton >/dev/null 2>&1 && compton -b &
+hsetroot -solid `appres | grep background | awk '{ print $2 }'` &
 nm-applet &
 
 exec i3
