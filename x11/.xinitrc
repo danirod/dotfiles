@@ -20,8 +20,8 @@ xrdb -merge ~/.Xresources
 # Set keyboard to Spanish
 setxkbmap es
 
-~/.fehbg &
 compton -b &
+hsetroot -solid `appres | grep background | awk '{ print $2 }'`
 nm-applet &
 
 exec i3

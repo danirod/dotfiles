@@ -1,11 +1,11 @@
 ! Colorscheme
-#include ".xresources.d/themes/solarized-dark.xresources"
+#include ".xresources.d/themes/gruvbox-dark.xresources"
 
 ! URXVT Terminal
 URxvt*geometry: 120x35
-URxvt*font: xft:Terminus:book:size=9
-URxvt*boldFont: xft:Terminus:book:size=9
-URxvt.intensityStyles: false
+URxvt*font: xft:Fira Mono:book:pixelsize=13;xft:FontAwesome
+URxvt*boldFont: xft:Fira Mono:bold:pixelsize=13;xft:FontAwesome
+URxvt.intensityStyles: true
 URxvt.scrollBar: false
 URxvt.internalBorder: 10
 

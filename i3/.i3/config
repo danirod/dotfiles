@@ -1,23 +1,15 @@
-#    █████
-# █ █     █     ████   ████  █    █ ██████ █  ████
-# █       █    █    █ █    █ ██   █ █      █ █    █
-# █  █████     █      █    █ █ █  █ █████  █ █
-# █       █    █      █    █ █  █ █ █      █ █  ███
-# █ █     █    █    █ █    █ █   ██ █      █ █    █
-# █  █████      ████   ████  █    █ █      █  ████
-
 set $mod Mod1
-font:pango Terminus 10
+font:pango Fira Mono 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec dmenu_run -fn 'Terminus-9' -nb '#002b36' -nf '#fdf6e3' -sb '#859900' -sf '#fdf6e3'
+bindsym $mod+d exec dmenu_run -fn 'Fira Mono-10' -nb '#282828' -nf '#ebdbb2' -sb '#98971a' -sf '#282828' -i -p ' RUN '
 
-# Windows that can float
-for_window [class="Skype"] floating enable
+# Start Polybar
+exec_always --no-startup-id $HOME/.config/polybar/polybar.sh
 
 # Change focus
 bindsym $mod+j focus left
@@ -64,16 +56,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspaces
-set $ws1 "1 &#xf120;"
-set $ws2 "2 &#xf269;"
-set $ws3 "3 &#xf121;"
-set $ws4 "4 &#xf028;"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8 &#xf17e;"
+set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -85,7 +76,6 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -97,7 +87,6 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -132,35 +121,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# statusbar
-bar {
-        font pango:Terminus, Awesome 9
-        position bottom
-        mode dock
-        status_command i3status
-        tray_output primary
-        separator_symbol " / "
-        height 17
-
-        colors {
-            background  #002b36
-            statusline  #93a1a1
-            separator   #657b83
-            focused_workspace   #859900 #859900 #fdf6e3
-            active_workspace    #002b36 #002b36 #93a1a1
-            inactive_workspace  #002b36 #002b36 #93a1a1
-            urgent_workspace    #dc322f #dc322f #fdf6e3
-        }
-}
-
 # Colors
 # class                             border      backgr.     text
-client.focused                      #859900     #859900     #fdf6e3 #859900
-client.unfocused                    #002b36     #002b36     #93a1a1 #002b36
-client.focused_inactive             #002b36     #002b36     #93a1a1 #002b36
-client.urgent                       #dc322f     #dc322f     #fdf6e3 #dc322f
+client.focused                      #98971a     #98971a     #fdf6e3 #98971a
+client.unfocused                    #928374     #928374     #93a1a1 #928374
+client.focused_inactive             #928374     #928374     #93a1a1 #928374
+client.urgent                       #cc241d     #cc241d     #fdf6e3 #cc241d
 
-new_window pixel 3
-new_float pixel 3
-gaps inner 30
-gaps outer 30
+new_window pixel 2
+new_float pixel 2
+gaps inner 8
+gaps outer 8

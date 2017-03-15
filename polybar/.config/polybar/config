@@ -1,0 +1,127 @@
+[colors]
+background = ${xrdb:background}
+background-alt = ${xrdb:color8}
+foreground = ${xrdb:foreground}
+foreground-alt = ${xrdb:color7}
+primary = ${xrdb:color2}
+secondary = ${xrdb:color3}
+alert = ${xrdb:color1}
+
+[bar/top]
+width = 100%
+height = 19
+offset-x = 0%
+offset-y = 0%
+radius = 0.0
+fixed-center = false
+font-0 = Fira Mono:pixelsize=10;1
+font-1 = FontAwesome:pixelsize=12;2
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+modules-left = i3 xwindow
+modules-right = volume date
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+tray-position = right
+tray-padding = 2
+tray-background = #444444
+
+[module/xwindow]
+type = internal/xwindow
+label = %title%
+format-padding = 1
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+
+label-mode-padding = 1
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %icon% %index%
+label-focused-background = ${colors.primary}
+label-focused-foreground = ${colors.background}
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %icon% %index%
+label-unfocused-padding = 1
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+[module/date]
+type = internal/date
+interval = 5
+date = %a
+date-alt = %Y-%m-%d
+time = %H:%M
+time-alt = %H:%M:%S
+format-padding = 1
+format-prefix = " "
+format-background = #3a3a3a
+label = %date% %time%
+
+[module/volume]
+type = internal/volume
+
+format-volume-background = #303030
+format-muted-background = #303030
+format-muted-padding = 1
+format-volume-padding = 1
+
+format-volume = "<label-volume> <bar-volume>"
+label-volume = " "
+
+format-muted-prefix = " "
+label-muted = "AUDIO MUTE"
+
+bar-volume-width = 8
+bar-volume-foreground-0 = #98971a
+bar-volume-foreground-1 = #98971a
+bar-volume-foreground-2 = #98971a
+bar-volume-foreground-3 = #98971a
+bar-volume-foreground-4 = #d79921
+bar-volume-foreground-5 = #d79921
+bar-volume-foreground-6 = #cc241d
+bar-volume-gradient = true
+bar-volume-indicator = ●
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
