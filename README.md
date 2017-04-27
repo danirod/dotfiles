@@ -37,7 +37,7 @@ However, there are a few special packages:
 ## Disclaimer
 
 **Please note that the settings provided by this repository are highly
-opinionated and designed to fit my needs. I don't recommend nobody to stick
+opinionated and designed to fit my needs. I don't recommend anyone to stick
 with my settings.** My suggestion on the use of this repository is to take
 it as a framework for setting your own dotfiles.
 
