@@ -19,7 +19,7 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export RUST_SRC_PATH=/usr/local/src/rustc/src
 
 # Set up PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 if [ -d $HOME/.bin ]; then export PATH="$HOME/.bin:$PATH"; fi
 if [ -d $CARGO_HOME/bin ]; then export PATH="$CARGO_HOME/bin:$PATH"; fi
 if [ -d $RVM_HOME/bin ]; then export PATH="$RVM_HOME/bin:$PATH"; fi
