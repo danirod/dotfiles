@@ -22,6 +22,7 @@ Plug 'ap/vim-buftabline'
 Plug 'scrooloose/nerdtree'
 Plug 'mileszs/ack.vim'
 Plug 'vimwiki/vimwiki'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Language and framework packs
 Plug 'sheerun/vim-polyglot'
@@ -120,6 +121,15 @@ let g:ctrlp_map = '<Leader>,'
 
 " vim-closetag
 let g:closetag_filenames = "*.html,*.html.erb,*.xml"
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_delay = 250
+
+" vim-gutter
+highlight GitGutterAdd ctermbg=green ctermfg=green
+highlight GitGutterRemove ctermbg=red ctermfg=red
+highlight GitGutterChange ctermbg=cyan ctermfg=cyan
 
 " NERDtree
 map <Leader>nt :NERDTreeToggle<CR>
