@@ -60,6 +60,10 @@ alias la='ls -A'        # show hidden files
 alias du='du -h'        # du, don't bomb me with a lot of numbers!
 alias sshx='ssh -X'     # ssh with X11 redirection (I use this A LOT)
 
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 # Define some color constants
   RESET='\[\e[0;0m\]'
   WHITE='\[\e[0;37m\]'
