@@ -13,3 +13,6 @@ alias brr='bin/rake db:rollback'
 alias bee='bundle exec'
 alias bii='bundle install'
 alias boo='bundle outdated'
+
+# transition to nvim
+alias vim='nvim'
