@@ -118,6 +118,7 @@ imap <C-P> <Esc>:bprev<CR>i
 
 " CtrlP
 let g:ctrlp_map = '<Leader>,'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " vim-closetag
 let g:closetag_filenames = "*.html,*.html.erb,*.xml"
