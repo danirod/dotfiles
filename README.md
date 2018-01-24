@@ -2,9 +2,16 @@
 
 ![Screenshot](screenshot.png)
 
-My current dotfiles setup. I try to keep the configuration of the OS I use
-in sync. This setup has been tested to work on Arch Linux, Ubuntu, OS X and
-some MSYS/Windows applications.
+This is my dotfiles repository. Here I host text-only configuration files used
+by some of the apps I use and I want to keep in sync through multiple
+computers. This setup is regularly tested to work on Arch Linux, Debian and
+MacOS X.
+
+Since these configuration files are text files, it makes sense to store them on
+Git repositories, giving you a few advantages: you can run experiments knowing
+that there's an easy way for rolling back undesired changes; and, you can
+sync your settings to multiple computers you use and even keep a backup in the
+cloud for easy setting up a new system after a fresh OS reinstallation.
 
 ## Install
 
