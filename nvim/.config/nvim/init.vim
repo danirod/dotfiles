@@ -110,8 +110,6 @@ nmap <Leader>b :BuffergatorToggle<CR>
 map <Leader>nt :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeWinSize=20
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " ack
 nnoremap <C-T> :Ack!<Space>
