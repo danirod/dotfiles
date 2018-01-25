@@ -1,10 +1,3 @@
-" danirod's nvimrc settings
-" Author and maintainer: Dani Rodríguez <dani@danirod.es>
-"
-" Hello, dear lurkers! Just remember at all times these are my settings.
-" They fit my use cases but they are highly opinionated, specially when it
-" comes to themes and appearances.
-
 " Installs vim-plug
 if empty(glob("~/.config/nvim/autoload/plug.vim"))
     silent !curl -fLso ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -13,37 +6,7 @@ end
 
 " vim-plug plugins
 call plug#begin("~/.config/nvim/plugged/")
-
-" Shell and commands.
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim' " To-Do: try fzf
-Plug 'ap/vim-buftabline'
-Plug 'scrooloose/nerdtree'
-Plug 'mileszs/ack.vim'
-Plug 'vimwiki/vimwiki'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-" Language and framework packs
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-rails'
-Plug 'elixir-editors/vim-elixir'
-
-" Development tools
-Plug 'editorconfig/editorconfig-vim'
-Plug 'slashmili/alchemist.vim'
-Plug 'racer-rust/vim-racer'
-
-" Web Development
-Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-endwise'
-Plug 'alvan/vim-closetag'
-
-" Colorschemes
-Plug 'morhetz/gruvbox'
-Plug 'arcticicestudio/nord-vim'
-
-" vim-plug plugins
+source $HOME/.config/nvim/plugins.vim
 call plug#end()
 
 " Disable aditional files.
@@ -58,12 +21,8 @@ set expandtab
 set shiftwidth=4
 set softtabstop=4
 
-" Lets you hide a modified and unsaved buffer when you attempt to open another.
-" Default behaviour without this warns the user to save the current buffer.
-" Subjective opinion: set hidden should've been ON by default.
+" Buffer settings
 set hidden
-
-" Additional buffer settings
 set nowrap
 set showmatch
 
@@ -88,13 +47,13 @@ imap <F5> <ESC>:set invrelativenumber<CR>i
 
 " Mark cursor lines and columns, but only if there are enough colors.
 " (These settings don't look so pleasant when there are not enough colors).
-if &t_Co >= 256 || has("gui_running")
+if &t_Co >= 256
     set cursorline
     set cursorcolumn
 endif
 
 " Mark trailing spaces.
-if &t_Co >= 2 || has("gui_running")
+if &t_Co >= 2
     " Fancy highlighting for space groups.
     highlight ExtraWhitespace ctermbg=red guibg=red
     match ExtraWhitespace /\s\+$/
@@ -130,10 +89,29 @@ let g:closetag_filenames = "*.html,*.html.erb,*.xml"
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_delay = 250
 
+" vim-gitgutter
+nmap <Leader>hn <Plug>GitGutterNextHunk
+nmap <Leader>hp <Plug>GitGutterPrevHunk
+nmap <Leader>ha <Plug>GitGutterStageHunk
+nmap <Leader>hr <Plug>GitGutterUndoHunk
+nmap <Leader>hv <Plug>GitGutterPreviewHunk
+
+" undotree
+nmap <Leader>u :UndotreeToggle<CR>
+if has("persistent_undo")
+    set undodir=$HOME/.local/share/nvim/undo/
+    set undofile
+endif
+
+" Buffergator
+nmap <Leader>b :BuffergatorToggle<CR>
+
 " NERDtree
 map <Leader>nt :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeWinSize=20
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " ack
 nnoremap <C-T> :Ack!<Space>
