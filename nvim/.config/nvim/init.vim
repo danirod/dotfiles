@@ -41,6 +41,7 @@ Plug 'alvan/vim-closetag'
 
 " Colorschemes
 Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 
 " vim-plug plugins
 call plug#end()
@@ -76,8 +77,7 @@ autocmd FileType yaml setlocal sw=2 sts=2
 if &t_Co > 2 || has("gui_running")
     syntax on
     set colorcolumn=80
-    silent! color gruvbox
-    set background=dark
+    silent! color nord
 endif
 
 " Line numberings and relative numberings
@@ -104,8 +104,11 @@ else
     set list
 endif
 
-" Vsplits show the pipe character. Remove this behaviour.
-set fillchars+=vert:\
+" Make the vertical separator between panes a continuous vertical line.
+" NOTE! The font must support this character to make it look continuous.
+" Otherwise, the vertical bar will have little gaps in between lines.
+set fillchars+=vert:\│
+highlight VertSplit guibg=NONE ctermbg=NONE
 
 " Leader. We're having fun.
 let mapleader=","
@@ -126,11 +129,6 @@ let g:closetag_filenames = "*.html,*.html.erb,*.xml"
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_delay = 250
-
-" vim-gutter
-highlight GitGutterAdd ctermbg=green ctermfg=green
-highlight GitGutterRemove ctermbg=red ctermfg=red
-highlight GitGutterChange ctermbg=cyan ctermfg=cyan
 
 " NERDtree
 map <Leader>nt :NERDTreeToggle<CR>
