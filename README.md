@@ -13,6 +13,22 @@ that there's an easy way for rolling back undesired changes; and, you can
 sync your settings to multiple computers you use and even keep a backup in the
 cloud for easy setting up a new system after a fresh OS reinstallation.
 
+## First boot
+
+### macOS
+
+The `Brewfile` committed to this repository makes easy to install the software
+packages I use after a fresh macOS installation. Install Homebrew, install
+Caskroom, then run:
+
+    brew bundle --file=$HOME/.dotfiles/Brewfile
+
+This will install packages listed in the Brewfile.
+
+### Linux
+
+TODO: Find something similar for Debian and Arch.
+
 ## Install
 
 Clone this repository in a location such as `~/.dotfiles`. Then, enter
