@@ -82,13 +82,6 @@ imap <C-P> <Esc>:bprev<CR>i
 let g:ctrlp_map = '<Leader>,'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
-" vim-closetag
-let g:closetag_filenames = "*.html,*.html.erb,*.xml"
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 250
-
 " vim-gitgutter
 nmap <Leader>hn <Plug>GitGutterNextHunk
 nmap <Leader>hp <Plug>GitGutterPrevHunk
