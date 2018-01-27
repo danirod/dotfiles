@@ -1,71 +1,57 @@
+# danirod's dotfiles
+
 ## About
 
-![Screenshot](screenshot.png)
+These are my system dotfiles. These files manage settings for the software and
+operating systems I use. I move around macOS, Arch Linux and Debian and these
+are the supported operating systems for these dotfiles. Feel free to look and
+take what you want, but keep in mind that this is MY opinionated config.
 
-This is my dotfiles repository. Here I host text-only configuration files used
-by some of the apps I use and I want to keep in sync through multiple
-computers. This setup is regularly tested to work on Arch Linux, Debian and
-MacOS X.
+If you still don't do, take some time to organize your dotfiles inside a Git
+repository. You'll gain some advantages: versioning your config so you can make
+changes knowing you can rollback if things go wrong; easy cloud sync through
+multiple computers via Git; backup for setting new systems after a format.
 
-Since these configuration files are text files, it makes sense to store them on
-Git repositories, giving you a few advantages: you can run experiments knowing
-that there's an easy way for rolling back undesired changes; and, you can
-sync your settings to multiple computers you use and even keep a backup in the
-cloud for easy setting up a new system after a fresh OS reinstallation.
+## Repository structure
 
-## First boot
+* `home` directory: common configuration for shared applications:
+  bash, tmux, neovim, neomutt, irssi...
+* `mac` directory: macOS specific dotfiles: system settings, reset script...
+* `linux` directory: Linux/X11 specific dotfiles: xinit, i3, compton, fonts...
 
-### macOS
+## Usage
 
-The `Brewfile` committed to this repository makes easy to install the software
-packages I use after a fresh macOS installation. Install Homebrew, install
-Caskroom, then run:
+Place a symlink on the appropiate location for each dotfile pointing to a file
+on this repo. For instance, ~/.bashrc should be a symlink pointing to
+~/.dotfiles/home/.bashrc. That way, if ~/.bashrc gets modified, your ~/.dotfiles
+working directory gets modified and you can make a commit.
 
-    brew bundle --file=$HOME/.dotfiles/Brewfile
+This repo is optimized for [GNU Stow](https://www.gnu.org/s/stow). You should
+install GNU Stow as it makes this _symlink_ process automated. (There are many
+other reasons on why you should use GNU Stow). After installing Stow, cd to
+~/.dotfiles and run `stow home` to make symlinks on your home directory for each
+file in `home` automatically. Run `stow linux` or `stow mac` to symlink
+additional dotfiles appropiately.
 
-This will install packages listed in the Brewfile.
+## Installation scripts
 
-### Linux
+This is a feature under development. To make it easier to bootstrap a new
+system after installing a fresh OS, some installation scripts are under
+development. They will install the software packages I use on each OS. At the
+moment there is a Brewfile for macOS. Something similar for pacman (Arch) or
+dpkg (Debian) is pending to be done.
 
-TODO: Find something similar for Debian and Arch.
+* macOS: install Homebrew, install Homebrew Cask, then run
+  `brew bundle --file=~/.dotfiles/Brewfile`. This will add taps and formulaes
+  declared in the Brewfile. Homebrew unfortunately doesn't track well enough
+  dependencies. This Brewfile can also be used to purge your Homebrew
+  installation by running `brew bundle cleanup --file=~/.dotfiles/Brewfile`.
+  This will remove packages not declared in the Brewfile and purge unused orphan
+  dependencies.
 
-## Install
+## Changelog
 
-Clone this repository in a location such as `~/.dotfiles`. Then, enter
-the just cloned repository and start stowing the packages that you want.
-
-    git clone git://github.com/danirod/dotfiles ~/.dotfiles
-    cd ~/.dotfiles
-    stow zsh
-    stow openbox
-    stow tmux
-
-Note that `stow zsh` works because there is a directory named `zsh` at
-`~/.dotfiles` and because the parent directory for `~/.dotfiles/` is
-$HOME. If you are cloning this repository into a different location you will
-need to change the target directory or you will get these dotfiles linked
-at wrong locations.
-
-## Packages
-
-Most of the packages have the name of the application they are used by, such
-as **atom**, **bash** or **zsh** and they don't need further explanation.
-However, there are a few special packages:
-
-* **osx**: special settings for MacOS X.
-* **powershell**: special settings for Windows (PowerShell).
-* **ubuntu**: special settings for Ubuntu based systems.
-* **windows**: special settings for Windows (Cygwin / MSYS-NT).
-
-## Disclaimer
-
-**Please note that the settings provided by this repository are highly
-opinionated and designed to fit my needs. I don't recommend nobody to stick
-with my settings.** My suggestion on the use of this repository is to take
-it as a framework for setting your own dotfiles.
-
-**The contents of this repository are provided AS IS with no warranties.
-I'm not responsible if you break your computer, lose your local settings or
-do anything wrong because of running the wrong script or executing the wrong
-command.**
-
+The repository layout was changed on Jan 2018 and I removed support for software
+I didn't use anymore, such as zsh, openbox, powershell and windows/msys. If
+you're looking for that, checkout older commits. Additional branches and tags
+for historic reasons are pending to be made.
