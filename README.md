@@ -41,13 +41,9 @@ development. They will install the software packages I use on each OS. At the
 moment there is a Brewfile for macOS. Something similar for pacman (Arch) or
 dpkg (Debian) is pending to be done.
 
-* macOS: install Homebrew, install Homebrew Cask, then run
-  `brew bundle --file=~/.dotfiles/Brewfile`. This will add taps and formulaes
-  declared in the Brewfile. Homebrew unfortunately doesn't track well enough
-  dependencies. This Brewfile can also be used to purge your Homebrew
-  installation by running `brew bundle cleanup --file=~/.dotfiles/Brewfile`.
-  This will remove packages not declared in the Brewfile and purge unused orphan
-  dependencies.
+* macOS: install Homebrew, install Homebrew Cask, stow the `mac` directory to
+  place the Brewfile in ~/.Brewfile. Then run `brew bundle --global`. This will
+  add taps and formulaes declared in the Brewfile.
 
 ## Changelog
 
