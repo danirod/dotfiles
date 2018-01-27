@@ -1,11 +1,15 @@
-# bash_profile file
+try_source() {
+  if [ -f $* ]; then source $*; fi
+}
 
-[ -f ~/.bashrc ] && . ~/.bashrc
+try_source ~/.bash/env.bash
 
-# Set up environment
+# Add local bin directories to PATH.
 [ -d $HOME/.bin ] && PATH="$PATH:$HOME/.bin"
+[ -d $HOME/.local/bin ] && PATH="$PATH:$HOME/.local/bin"
 
-BASH_ENV=$HOME/.bashrc
+try_source ~/.bashrc
 
-export BASH_ENV PATH
+export PATH
 
+unset try_source
