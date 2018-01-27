@@ -1,3 +1,8 @@
+# system
+alias ll='ls -alFh'
+alias la='ls -A'
+alias vim='nvim'
+
 # bin/rails
 alias brc='bin/rails c'
 alias brs='bin/rails s'
@@ -13,6 +18,3 @@ alias brr='bin/rake db:rollback'
 alias bee='bundle exec'
 alias bii='bundle install'
 alias boo='bundle outdated'
-
-# transition to nvim
-alias vim='nvim'
