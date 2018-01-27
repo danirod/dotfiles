@@ -12,11 +12,11 @@ HISTFILESIZE=2000
 
 # Bash completions
 if ! shopt -oq posix; then
-    try_source /etc/bash_completion
-    try_source /usr/local/etc/bash_completion
+    [ -f /etc/bash_completion ] && source /etc/bash_completion
+    [ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
 fi
 
-try_source ~/.bash/colors.bash
-try_source ~/.bash/aliases.bash
-try_source ~/.bash/functions.bash
-try_source ~/.bash/prompt.bash
+source ~/.bash/colors.bash
+source ~/.bash/aliases.bash
+source ~/.bash/functions.bash
+source ~/.bash/prompt.bash
