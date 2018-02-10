@@ -26,3 +26,10 @@ alias vsus='vagrant suspend'
 alias vsh='vagrant ssh'
 alias vrs='vagrant rsync'
 alias vauto='vagrant rsync-auto'
+
+# Homebrew for macOS
+# TODO: Disable these aliases on Linux (or get Linuxbrew, whatever)
+alias brew_install='brew bundle --global' # installs software in brewfile
+alias brew_check='brew bundle check --global' # checks
+alias brew_cleanable='brew bundle cleanup --global' # lists software to remove
+alias brew_clean='brew bundle cleanup --global --force' # removes
