@@ -16,9 +16,11 @@ Plug 'mattn/emmet-vim'
 " Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Python productivity pack
 Plug 'tmhedberg/SimpylFold', { 'for': ['python'] }
+Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
 
 " Colorschemes
 Plug 'morhetz/gruvbox'
