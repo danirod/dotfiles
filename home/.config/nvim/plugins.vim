@@ -19,3 +19,4 @@ Plug 'tpope/vim-fugitive'
 " Colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
+Plug 'sstallion/vim-wtf'

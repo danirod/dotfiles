@@ -36,7 +36,8 @@ autocmd FileType yaml setlocal sw=2 sts=2
 if &t_Co > 2 || has("gui_running")
     syntax on
     set colorcolumn=80
-    silent! color nord
+    let g:wtf_pedantic_guicolors = 1
+    silent! color wtf
 endif
 
 " Line numberings and relative numberings
@@ -49,7 +50,6 @@ imap <F5> <ESC>:set invrelativenumber<CR>i
 " (These settings don't look so pleasant when there are not enough colors).
 if &t_Co >= 256
     set cursorline
-    set cursorcolumn
 endif
 
 " Mark trailing spaces.
@@ -67,7 +67,7 @@ endif
 " NOTE! The font must support this character to make it look continuous.
 " Otherwise, the vertical bar will have little gaps in between lines.
 set fillchars+=vert:\│
-highlight VertSplit guibg=NONE ctermbg=NONE
+highlight VertSplit guibg=NONE cterm=NONE ctermbg=NONE
 
 " Leader. We're having fun.
 let mapleader=","
