@@ -15,6 +15,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 " Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
+Plug 'majutsushi/tagbar'
 
 " Colorschemes
 Plug 'morhetz/gruvbox'

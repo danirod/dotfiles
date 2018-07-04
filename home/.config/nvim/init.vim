@@ -104,6 +104,10 @@ map <Leader>nt :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeWinSize=20
 
+" tagbar
+nmap <F8> :TagbarToggle<CR>
+nmap <C-F8> :TagbarOpenAutoClose<CR>
+
 " ack
 nnoremap <C-T> :Ack!<Space>
 if executable('ag')
