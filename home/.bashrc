@@ -20,3 +20,7 @@ source ~/.bash/colors.bash
 source ~/.bash/aliases.bash
 source ~/.bash/functions.bash
 source ~/.bash/prompt.bash
+
+for f in ~/.bash/local.d/*.bash; do
+    if [ -x $f ]; then . $f; fi
+done
