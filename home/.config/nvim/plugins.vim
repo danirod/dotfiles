@@ -17,6 +17,9 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 
+" Python productivity pack
+Plug 'tmhedberg/SimpylFold', { 'for': ['python'] }
+
 " Colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'

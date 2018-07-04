@@ -78,6 +78,10 @@ imap <C-N> <Esc>:bnext<CR>i
  map <C-P>      :bprev<CR>
 imap <C-P> <Esc>:bprev<CR>i
 
+" Folding settings: global and particular for specific plugins.
+nmap <Space> za
+let g:SimpylFold_docstring_preview = 1
+
 " CtrlP
 let g:ctrlp_map = '<Leader>,'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
