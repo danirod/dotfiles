@@ -38,6 +38,7 @@ if &t_Co > 2 || has("gui_running")
     set colorcolumn=80
     let g:wtf_pedantic_guicolors = 1
     silent! color wtf
+    highlight ColorColumn ctermbg=88
 endif
 
 " Line numberings and relative numberings
