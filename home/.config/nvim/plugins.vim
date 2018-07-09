@@ -20,6 +20,7 @@ Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'leafgarland/typescript-vim'
 
 " Python productivity pack
 Plug 'tmhedberg/SimpylFold', { 'for': ['python'] }
