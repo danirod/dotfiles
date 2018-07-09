@@ -138,4 +138,5 @@ let g:deoplete#sources#jedi#show_docstring = 1
 let g:LanguageClient_serverCommands = {
     \ 'javascript': ['javascript-typescript-stdio'],
     \ 'css': ['css-languageserver', '--stdio'],
+    \ 'typescript': ['javascript-typescript-stdio'],
     \ }
