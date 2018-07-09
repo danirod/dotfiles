@@ -18,3 +18,11 @@ alias brr='bin/rake db:rollback'
 alias bee='bundle exec'
 alias bii='bundle install'
 alias boo='bundle outdated'
+
+# vagrant
+alias vup='vagrant up'
+alias vdown='vagrant halt'
+alias vsus='vagrant suspend'
+alias vsh='vagrant ssh'
+alias vrs='vagrant rsync'
+alias vauto='vagrant rsync-auto'
