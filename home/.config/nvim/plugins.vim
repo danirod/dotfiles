@@ -6,6 +6,7 @@ Plug 'mbbill/undotree'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vimwiki/vimwiki'
+Plug 'tpope/vim-obsession'
 
 " Language productivity
 " Plug 'AndrewRadev/splitjoin.vim'
