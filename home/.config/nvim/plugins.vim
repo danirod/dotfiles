@@ -25,6 +25,7 @@ Plug 'leafgarland/typescript-vim'
 " Python productivity pack
 Plug 'tmhedberg/SimpylFold', { 'for': ['python'] }
 Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
+Plug 'Vimjas/vim-python-pep8-indent', { 'for': ['python'] }
 
 " Colorschemes
 Plug 'morhetz/gruvbox'
