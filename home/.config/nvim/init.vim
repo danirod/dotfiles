@@ -26,6 +26,7 @@ set softtabstop=4
 set hidden
 set nowrap
 set showmatch
+set noshowmode
 
 " Some programming languages work better when 2 spaces for tab is used...
 autocmd FileType html,css,sass,scss,javascript setlocal sw=2 sts=2
@@ -142,6 +143,7 @@ let g:LanguageClient_serverCommands = {
     \ 'css': ['css-languageserver', '--stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
     \ }
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " deoplete-clang
 " TODO: These routes are hardcoded to work with macOS. What about Linux / BSD?
@@ -151,3 +153,6 @@ let g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTool
 " syntastic
 let g:syntastic_check_on_open = 1
 let g:syntastic_c_config_file = '.syntastic_c_config'
+
+" echodoc
+let g:echodoc_enable_at_startup = 1
