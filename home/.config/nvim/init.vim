@@ -159,3 +159,7 @@ let g:echodoc_enable_at_startup = 1
 
 " indentline
 let g:indentLine_concealcursor=0
+
+" markdown + vim-markdown
+let g:vim_markdown_frontmatter = 1
+autocmd FileType markdown set breakindent wrap linebreak
