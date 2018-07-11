@@ -9,6 +9,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-obsession'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'Yggdroot/indentLine'
+Plug 'godlygeek/tabular'
+Plug 'junegunn/goyo.vim'
 
 " Language productivity
 " Plug 'AndrewRadev/splitjoin.vim'
@@ -36,6 +38,9 @@ Plug 'Vimjas/vim-python-pep8-indent', { 'for': ['python'] }
 
 " C productivity pack
 Plug 'zchee/deoplete-clang', { 'for': ['c', 'c++'] }
+
+" Markdown productivity pack
+Plug 'plasticboy/vim-markdown'
 
 " Colorschemes
 Plug 'morhetz/gruvbox'
