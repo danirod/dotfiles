@@ -28,6 +28,9 @@ Plug 'tmhedberg/SimpylFold', { 'for': ['python'] }
 Plug 'zchee/deoplete-jedi', { 'for': ['python'] }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': ['python'] }
 
+" C productivity pack
+Plug 'zchee/deoplete-clang', { 'for': ['c', 'c++'] }
+
 " Colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'arcticicestudio/nord-vim'
