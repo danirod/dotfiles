@@ -17,6 +17,7 @@ set backspace=indent,eol,start " backspace will always work on insert mode
 
 " Indent settings
 set autoindent
+set smarttab
 set expandtab
 set shiftwidth=4
 set softtabstop=4
@@ -31,6 +32,7 @@ autocmd FileType html,css,sass,scss,javascript setlocal sw=2 sts=2
 autocmd FileType json setlocal sw=2 sts=2
 autocmd FileType ruby,eruby setlocal sw=2 sts=2
 autocmd FileType yaml setlocal sw=2 sts=2
+autocmd FileType python setlocal tw=79
 
 " Enable colorschemes, but only if terminal supports so.
 if &t_Co > 2 || has("gui_running")
