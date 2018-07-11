@@ -142,3 +142,8 @@ let g:LanguageClient_serverCommands = {
     \ 'css': ['css-languageserver', '--stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
     \ }
+
+" deoplete-clang
+" TODO: These routes are hardcoded to work with macOS. What about Linux / BSD?
+let g:deoplete#sources#clang#clang_header = '/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include'
+let g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
