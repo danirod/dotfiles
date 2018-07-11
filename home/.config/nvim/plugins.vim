@@ -7,6 +7,7 @@ Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-obsession'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Language productivity
 " Plug 'AndrewRadev/splitjoin.vim'
