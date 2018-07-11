@@ -23,6 +23,7 @@ Plug 'Shougo/neco-syntax'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-syntastic/syntastic'
+Plug 'Shougo/echodoc.vim'
 
 " Python productivity pack
 Plug 'tmhedberg/SimpylFold', { 'for': ['python'] }
