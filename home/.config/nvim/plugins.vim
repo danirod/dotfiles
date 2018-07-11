@@ -8,6 +8,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-obsession'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'Yggdroot/indentLine'
 
 " Language productivity
 " Plug 'AndrewRadev/splitjoin.vim'
