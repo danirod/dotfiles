@@ -25,6 +25,7 @@ Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.s
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'ervandew/supertab'
+Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/echodoc.vim'
 
 " Python productivity pack
