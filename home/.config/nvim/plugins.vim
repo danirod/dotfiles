@@ -12,6 +12,9 @@ Plug 'Yggdroot/indentLine'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/goyo.vim'
 
+" Language definitions.
+Plug 'isRuslan/vim-es6'
+
 " Language productivity
 " Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
