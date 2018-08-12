@@ -39,6 +39,11 @@ Plug 'Vimjas/vim-python-pep8-indent', { 'for': ['python'] }
 " C productivity pack
 Plug 'zchee/deoplete-clang', { 'for': ['c', 'c++'] }
 
+" Go productivity pack
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
 " Markdown productivity pack
 Plug 'plasticboy/vim-markdown'
 

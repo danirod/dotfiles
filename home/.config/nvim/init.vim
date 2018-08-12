@@ -153,6 +153,7 @@ let g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTool
 " syntastic
 let g:syntastic_check_on_open = 1
 let g:syntastic_c_config_file = '.syntastic_c_config'
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 
 " echodoc
 let g:echodoc_enable_at_startup = 1
