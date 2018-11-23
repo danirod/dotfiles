@@ -34,6 +34,14 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# Rearrange workspaces in multiple monitors.
+# Note to self: you cannot use braceleft and braceright because on an
+# es-es layout they would require you to press alt-gr to be triggered
+# and it would be lame to press so many keys at the same time.
+# dead_acute and ccedilla represent the same physical keys.
+bindsym $mod+Shift+dead_acute move workspace to output left
+bindsym $mod+Shift+ccedilla move workspace to output right
+
 # Splits
 bindsym $mod+h split h
 bindsym $mod+v split v
