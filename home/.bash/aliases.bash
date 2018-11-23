@@ -3,6 +3,9 @@ alias ll='ls -alFh'
 alias la='ls -A'
 alias vim='nvim'
 
+# sudo
+alias fuck='sudo !!'
+
 # bin/rails
 alias brc='bin/rails c'
 alias brs='bin/rails s'
