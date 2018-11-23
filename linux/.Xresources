@@ -1,13 +1,13 @@
 ! Colorscheme
-#include ".xresources.d/themes/gruvbox-dark.xresources"
+#include ".xresources.d/themes/tango.xresources"
 
 ! URXVT Terminal
 URxvt*geometry: 120x35
-URxvt*font: xft:Fira Mono:book:pixelsize=13;xft:FontAwesome
-URxvt*boldFont: xft:Fira Mono:bold:pixelsize=13;xft:FontAwesome
+URxvt*font: xft:Hack:style=Regular:size=10;xft:FontAwesome
+URxvt*boldFont: xft:Hack:style=bold:size=10;xft:FontAwesome
 URxvt.intensityStyles: true
 URxvt.scrollBar: false
-URxvt.internalBorder: 10
+URxvt.internalBorder: 0
 
 Xft.autohint: 1
 Xft.lcdfilter: lcdlegacy

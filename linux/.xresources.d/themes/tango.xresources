@@ -1,0 +1,33 @@
+! Tango color palette
+*background:         #2e3436
+*foreground:         #eeeeec
+*cursorColor:        #8ae234
+! foreground color for underline
+*colorUL:            #8ae234
+! line color for underline
+*underlineColor:     #92659a
+! black dark/light
+*color0:             #2e3436
+*color8:             #6e706b
+! red dark/light
+*color1:             #cc0000
+*color9:             #ef2929
+! green dark/light
+*color2:             #4e9a06
+*color10:            #8ae234
+! yellow dark/light
+*color3:             #edd400
+*color11:            #fce94f
+! blue dark/light
+*color4:             #3465a4
+*color12:            #729fcf
+! magenta dark/light
+*color5:             #92659a
+*color13:            #c19fbe
+! cyan dark/light
+*color6:             #07c7ca
+*color14:            #63e9e9
+! white dark/light
+*color7:             #d3d7cf
+*color15:            #eeeeec
+
