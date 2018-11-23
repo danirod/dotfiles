@@ -9,3 +9,5 @@ cm_info() { tput setaf 6; echoerr "INFO: $@"; tput sgr0; }
 cm_success() { tput setaf 2; echoerr "SUCCESS: $@"; tput sgr0; }
 cm_warning() { tput setaf 3; echoerr "WARNING: $@"; tput sgr0; }
 cm_error() { tput setaf 1; echoerr "ERROR: $@"; tput sgr0; }
+
+longrun() { $@; echo -e '\a'; }
