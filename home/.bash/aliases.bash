@@ -30,6 +30,15 @@ alias vsh='vagrant ssh'
 alias vrs='vagrant rsync'
 alias vauto='vagrant rsync-auto'
 
+# git
+alias gmaster='git checkout master'
+alias gdevel='git checkout devel'
+alias gdevelop='git checkout develop'
+alias gco='git commit'
+alias gcheck='git checkout'
+alias gamend='git commit --amend'
+alias gammend='git commit --amend'
+
 # Homebrew for macOS
 # TODO: Disable these aliases on Linux (or get Linuxbrew, whatever)
 alias brew_install='brew bundle --global' # installs software in brewfile
