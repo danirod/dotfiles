@@ -4,7 +4,7 @@ alias la='ls -A'
 alias vim='nvim'
 
 # sudo
-alias fuck='sudo !!'
+alias fuck='sudo $(history -p \!\!)'
 
 # bin/rails
 alias brc='bin/rails c'
