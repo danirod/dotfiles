@@ -33,3 +33,19 @@
     added = yellow
     changed = green
     untracked = cyan
+
+[mergetool "vimdiff"]
+    cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+
+[mergetool]
+	prompt = false
+
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
