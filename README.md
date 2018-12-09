@@ -18,6 +18,10 @@ multiple computers via Git; backup for setting new systems after a format.
   bash, tmux, neovim, neomutt, irssi...
 * `mac` directory: macOS specific dotfiles: system settings, reset script...
 * `linux` directory: Linux/X11 specific dotfiles: xinit, i3, compton, fonts...
+* linux-work directory: particular settings that are only useful for my
+  work laptop (i.e. not my raspberry or other generical Linux systems).
+* systemwide: **do not symlink this directory**, as it contains files that
+  belong to /etc, /usr or other directories outside $HOME.
 
 ## Usage
 
