@@ -31,6 +31,9 @@ bindsym $mod+d exec dmenu_run -fn 'envypn-11' -nb '$background' -nf '$foreground
 # Start Polybar
 exec_always --no-startup-id $HOME/.config/polybar/polybar.sh
 
+# In case of emergency, rearrange displays.
+bindsym $mod+Shift+m exec autorandr --change
+
 # Change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
