@@ -11,17 +11,22 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'Yggdroot/indentLine'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/goyo.vim'
+Plug 'MattesGroeger/vim-bookmarks'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'honza/vim-snippets'
 
 " Language definitions.
-Plug 'isRuslan/vim-es6'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 " Language productivity
 " Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
-" Plug 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
-" Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -33,6 +38,8 @@ Plug 'vim-syntastic/syntastic'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/echodoc.vim'
+Plug 'michaeljsmith/vim-indent-object' " Let's be honest, this is written with python in mind
+Plug 'tpope/vim-surround'
 
 " Python productivity pack
 Plug 'tmhedberg/SimpylFold', { 'for': ['python'] }
