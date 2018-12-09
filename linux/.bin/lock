@@ -1,0 +1,13 @@
+#!/bin/bash
+
+FILE=/tmp/lockscreen.png
+
+# Take a screenshot
+scrot $FILE
+
+# Scale down then up to pixelate.
+convert $FILE -scale 25% -scale 400% $FILE
+convert $FILE -blur 0x3 200% $FILE
+
+# Lock the screen using the image.
+i3lock -e -i $FILE -f
