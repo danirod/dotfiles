@@ -33,5 +33,6 @@ command -v dropbox >/dev/null 2>&1 && dropbox start &
 command -v compton >/dev/null 2>&1 && compton -b &
 hsetroot -solid `appres | grep background | awk '{ print $2 }'` &
 nm-applet &
+~/.fehbg &
 
 exec i3
