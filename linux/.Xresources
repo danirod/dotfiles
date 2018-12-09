@@ -11,7 +11,7 @@ URxvt*font: xft:envypn:style=Regular:size=11;xft:FontAwesome
 URxvt*boldFont: xft:envypn:style=bold:size=11;xft:FontAwesome
 URxvt.intensityStyles: true
 URxvt.scrollBar: false
-URxvt.internalBorder: 0
+URxvt.internalBorder: 5
 
 Xft.autohint: 1
 Xft.lcdfilter: lcdlegacy
