@@ -12,6 +12,7 @@ fi
 
 # Calling this function will start the GNOME Keyring Daemon
 start_gnome_keyring() {
+    dbus-update-activation-environment --systemd DISPLAY
     eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
     export SSH_AUTH_SOCK
 }
