@@ -29,19 +29,13 @@ set showmatch
 set noshowmode
 
 " Some programming languages work better when 2 spaces for tab is used...
-autocmd FileType html,css,sass,scss,javascript setlocal sw=2 sts=2
-autocmd FileType json setlocal sw=2 sts=2
-autocmd FileType ruby,eruby setlocal sw=2 sts=2
-autocmd FileType yaml setlocal sw=2 sts=2
 autocmd FileType python setlocal tw=79
 
 " Enable colorschemes, but only if terminal supports so.
 if &t_Co > 2 || has("gui_running")
     syntax on
+    silent! color nord
     set colorcolumn=80
-    let g:wtf_pedantic_guicolors = 1
-    silent! color wtf
-    highlight ColorColumn ctermbg=88
 endif
 
 " Line numberings and relative numberings
@@ -137,13 +131,21 @@ let g:vimwiki_list = [{'path': '~/.vimwiki'}]
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+let g:python3_host_prog='/home/danirod/opt/neovim-python/bin/python'
 let g:deoplete#sources#jedi#show_docstring = 1
 let g:LanguageClient_serverCommands = {
     \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['javascript-typescript-stdio'],
     \ 'css': ['css-languageserver', '--stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
     \ }
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+" neosnippet
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
+let g:neosnippet#snippets_directory="~/.local/share/nvim/snippets/"
 
 " deoplete-clang
 " TODO: These routes are hardcoded to work with macOS. What about Linux / BSD?
@@ -160,6 +162,18 @@ let g:echodoc_enable_at_startup = 1
 
 " indentline
 let g:indentLine_concealcursor=0
+
+" bookmarks
+nmap <Leader>bm <Plug>BookmarkToggle
+nmap <Leader>bi <Plug>BookmarkAnnotate
+nmap <Leader>ba <Plug>BookmarkShowAll
+nmap <Leader>bj <Plug>BookmarkNext
+nmap <Leader>bk <Plug>BookmarkPrev
+nmap <Leader>bc <Plug>BookmarkClear
+nmap <Leader>bx <Plug>BookmarkClearAll
+nmap <Leader>bkk <Plug>BookmarkMoveUp
+nmap <Leader>bjj <Plug>BookmarkMoveDown
+nmap <Leader>bg <Plug>BookmarkMoveToLine
 
 " markdown + vim-markdown
 let g:vim_markdown_frontmatter = 1

@@ -1,5 +1,5 @@
 ! Colorscheme
-#include ".xresources.d/themes/tango.xresources"
+#include ".xresources.d/themes/nord.xresources"
 
 ! URXVT Terminal
 URxvt*geometry: 120x35
