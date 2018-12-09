@@ -156,7 +156,7 @@ client.unfocused $background $background $background $background
 client.focused_inactive $darkyellow $darkyellow $darkyellow $darkyellow
 client.urgent $red $red $red $red
 
-new_window pixel 2
-new_float pixel 2
-gaps inner 8
-gaps outer 8
+new_window pixel 1
+new_float pixel 1
+gaps inner 50
+gaps outer 0
