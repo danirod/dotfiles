@@ -1,0 +1,1 @@
+SUBSYSTEM=="drm", ACTION=="change", RUN+="/bin/bash /usr/local/bin/autorandr-detect"

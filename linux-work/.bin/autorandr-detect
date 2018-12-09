@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ $UID != 0 ]; then
+    exec autorandr --change
+fi
+
+# All the running sessions.
+for session in /tmp/.X11-unix/X*; do
+    if [ -S $session ]; then
+        # The owner of the socket.
+        owner=$(stat -c "%U" $session)
+        display=":${session#/tmp/.X11-unix/X}"
+        authority_file=~$owner/.Xauthority
+
+        export DISPLAY=$display
+        /bin/su -c "autorandr --change" "$owner"
+    fi
+done
