@@ -1,10 +1,14 @@
 ! Colorscheme
 #include ".xresources.d/themes/nord.xresources"
 
+! xterm
+XTerm.vt100.font: envypn
+XTerm.vt100.faceSize: 11
+
 ! URXVT Terminal
 URxvt*geometry: 120x35
-URxvt*font: xft:Hack:style=Regular:size=10;xft:FontAwesome
-URxvt*boldFont: xft:Hack:style=bold:size=10;xft:FontAwesome
+URxvt*font: xft:envypn:style=Regular:size=11;xft:FontAwesome
+URxvt*boldFont: xft:envypn:style=bold:size=11;xft:FontAwesome
 URxvt.intensityStyles: true
 URxvt.scrollBar: false
 URxvt.internalBorder: 0

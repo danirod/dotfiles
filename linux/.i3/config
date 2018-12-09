@@ -26,7 +26,7 @@ floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec dmenu_run -fn 'Fira Mono-10' -nb '#282828' -nf '#ebdbb2' -sb '#98971a' -sf '#282828' -i -p ' RUN '
+bindsym $mod+d exec dmenu_run -fn 'envypn-11' -nb '$background' -nf '$foreground' -sb '$black' -sf '$foreground' -i -p ' RUN '
 
 # Start Polybar
 exec_always --no-startup-id $HOME/.config/polybar/polybar.sh
