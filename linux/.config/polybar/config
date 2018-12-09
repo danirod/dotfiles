@@ -1,7 +1,7 @@
 [colors]
 background = ${xrdb:background}
 background-accent-1 = ${xrdb:color8}
-background-accent-2 = ${xrdb:foreground}
+background-accent-2 = ${xrdb:color6}
 foreground = ${xrdb:foreground}
 foreground-accent-1 = ${xrdb:foreground}
 foreground-accent-2 = ${xrdb:color0}
