@@ -8,122 +8,146 @@ foreground-accent-2 = ${xrdb:color0}
 primary = ${xrdb:color2}
 secondary = ${xrdb:color3}
 alert = ${xrdb:color1}
+wm-class = "polybar-top"
+
+[settings]
+screenchange-reload = true
 
 [bar/top]
+margin-top = 0
+margin-bottom = 0
 line-size = 1
 height = 17
-offset-x = 0%
-offset-y = 0%
 radius = 0.0
-fixed-center = false
+fixed-center = true
 font-0 = envypn:size=14;1
 font-1 = FontAwesome:size=10;2
 background = ${colors.background}
 foreground = ${colors.foreground}
+monitor = ${env:MONITOR:}
+
+padding = 0
+module-padding = 1
 
 modules-left = i3 xwindow
-modules-right = volume date
+modules-right = wireless vpn backlight battery volume date
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
 tray-position = right
-tray-padding = 2
-tray-background = #444444
+tray-padding = 5
+tray-background = ${colors.background-accent-2}
 
-[module/xwindow]
-type = internal/xwindow
-label = %title%
+
+# Display the current brightness level of the display. Scrolling the
+# mouse lets the brightness to be increased or decreased. Requires a
+# display that exposes this information, such as a laptop display.
+[module/backlight]
+type = internal/xbacklight
+format = <label>
+format-prefix = " "
 format-padding = 1
+label = "%percentage:2%%"
 
+
+# Displays the current battery level.
+[module/battery]
+type = internal/battery
+format-charging-background = ${colors.background-accent-1}
+format-charging-foreground = ${colors.foreground-accent-1}
+format-charging-padding = 1
+format-charging-prefix = " "
+format-discharging-background = ${colors.background-accent-1}
+format-discharging-foreground = ${colors.foreground-accent-1}
+format-discharging-padding = 1
+format-discharging-prefix = " "
+
+
+# Displays the current date
+[module/date]
+type = internal/date
+interval = 1
+date = %a
+date-alt = %Y-%m-%d
+time-alt = %H:%M
+time = %H:%M:%S
+format-padding = 1
+format-prefix = " "
+format-background = ${colors.background-accent-2}
+format-foreground = ${colors.foreground-accent-2}
+label = %date% %time%
+
+
+# Displays i3 workspace indicators when on an i3.
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
+strip-wsnumbers = true
 index-sort = true
 wrapping-scroll = false
-
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
-
 ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
-
-label-mode-padding = 1
+format = <label-state>
 label-mode-background = ${colors.primary}
-
-; focused = Active workspace on focused monitor
-label-focused = %icon% %index%
-label-focused-background = ${colors.primary}
-label-focused-foreground = ${colors.background}
-label-focused-padding = 1
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon% %index%
+label-unfocused-background = ${colors.background-accent-1}
+label-unfocused-foreground = ${colors.foreground-accent-1}
 label-unfocused-padding = 1
-
-; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-focused-background = ${colors.background-accent-2}
+label-focused-foreground = ${colors.foreground-accent-2}
+label-focused-padding = ${self.label-unfocused-padding}
 label-visible-background = ${self.label-focused-background}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-visible-padding = ${self.label-unfocused-padding}
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
+label-urgent-padding = ${self.label-unfocused-padding}
 
-[module/date]
-type = internal/date
-interval = 5
-date = %a
-date-alt = %Y-%m-%d
-time = %H:%M
-time-alt = %H:%M:%S
-format-padding = 1
-format-prefix = " "
-format-background = #3a3a3a
-label = %date% %time%
 
+# Displays the volume levels.
 [module/volume]
-type = internal/volume
-
-format-volume-background = #303030
-format-muted-background = #303030
-format-muted-padding = 1
+type = internal/pulseaudio
+label-volume = "%percentage:3%%"
+format-volume-prefix = ""
 format-volume-padding = 1
-
-format-volume = "<label-volume> <bar-volume>"
-label-volume = " "
-
+format-volume-background = ${colors.background-accent-1}
+format-volume-foreground = ${colors.foreground-accent-1}
+label-muted = "MUTE"
 format-muted-prefix = " "
-label-muted = "AUDIO MUTE"
-
-bar-volume-width = 8
-bar-volume-foreground-0 = #98971a
-bar-volume-foreground-1 = #98971a
-bar-volume-foreground-2 = #98971a
-bar-volume-foreground-3 = #98971a
-bar-volume-foreground-4 = #d79921
-bar-volume-foreground-5 = #d79921
-bar-volume-foreground-6 = #cc241d
-bar-volume-gradient = true
-bar-volume-indicator = ●
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+format-muted-padding = 1
+format-muted-background = ${colors.background-accent-1}
+format-muted-foreground = ${colors.foreground-accent-1}
 
 
-[settings]
-screenchange-reload = true
+# This module prints "VPN" if it detects that OpenVPN is running.
+# Taken from the official docs, saving me from writing a custom
+# ad-hoc script to test for the VPN connection.
+[module/vpn]
+type = custom/script
+exec = echo VPN
+exec-if = pgrep -x openvpn
+format-prefix = " "
+format-padding = 1
 
-[global/wm]
-margin-top = 0
-margin-bottom = 0
+
+# Displays the window title.
+[module/xwindow]
+type = internal/xwindow
+format-padding = 1
+label = %title%
+label-maxlen = 50
+
+
+# This module prints the SSID the computer is currently connected to
+# through the wireless interface.  (Note that the interface name is
+# currently hardcoded to the network interface of my laptop.)
+[module/wireless]
+type = internal/network
+interface = wlp3s0
+format-connected-padding = 1
+format-connected = <label-connected>
+label-connected =  %essid%
+
 
 ; vim:ft=dosini
