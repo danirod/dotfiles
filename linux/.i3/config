@@ -1,6 +1,26 @@
 set $mod Mod1
 font:pango Fira Mono 10
 
+# Colors
+set_from_resource $foreground       foreground #000000
+set_from_resource $background       background #000000
+set_from_resource $darkblack        color0  #000000
+set_from_resource $black            color8  #000000
+set_from_resource $darkred          color1  #000000
+set_from_resource $red              color9  #000000
+set_from_resource $darkgreen        color2  #000000
+set_from_resource $green            color10 #000000
+set_from_resource $darkyellow       color3  #000000
+set_from_resource $yellow           color11 #000000
+set_from_resource $darkblue         color4  #000000
+set_from_resource $blue             color12 #000000
+set_from_resource $darkmagenta      color5  #000000
+set_from_resource $magenta          color13 #000000
+set_from_resource $darkleafgreen    color6  #000000
+set_from_resource $leafgreen        color14 #000000
+set_from_resource $darkwhite        color7  #000000
+set_from_resource $white            color15 #000000
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -131,10 +151,10 @@ bindsym $mod+r mode "resize"
 
 # Colors
 # class                             border      backgr.     text
-client.focused                      #98971a     #98971a     #fdf6e3 #98971a
-client.unfocused                    #928374     #928374     #93a1a1 #928374
-client.focused_inactive             #928374     #928374     #93a1a1 #928374
-client.urgent                       #cc241d     #cc241d     #fdf6e3 #cc241d
+client.focused $foreground $foreground $foreground $foreground
+client.unfocused $background $background $background $background
+client.focused_inactive $darkyellow $darkyellow $darkwhite $green
+client.urgent $red $red $yellow $red
 
 new_window pixel 2
 new_float pixel 2

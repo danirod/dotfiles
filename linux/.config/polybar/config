@@ -1,8 +1,10 @@
 [colors]
 background = ${xrdb:background}
-background-alt = ${xrdb:color8}
+background-accent-1 = ${xrdb:color8}
+background-accent-2 = ${xrdb:foreground}
 foreground = ${xrdb:foreground}
-foreground-alt = ${xrdb:color7}
+foreground-accent-1 = ${xrdb:foreground}
+foreground-accent-2 = ${xrdb:color0}
 primary = ${xrdb:color2}
 secondary = ${xrdb:color3}
 alert = ${xrdb:color1}
