@@ -154,9 +154,9 @@ bindsym $mod+r mode "resize"
 
 # Colors
 # class                             border      backgr.     text
-client.focused $black $black $black $black
-client.unfocused $background $background $background $background
-client.focused_inactive $darkyellow $darkyellow $darkyellow $darkyellow
+client.focused $black $black $foreground $black
+client.unfocused $background $background $foreground $background
+client.focused_inactive $darkyellow $darkyellow $black $darkyellow
 client.urgent $red $red $red $red
 
 new_window pixel 1
