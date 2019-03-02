@@ -34,8 +34,11 @@ autocmd FileType python setlocal tw=79
 " Enable colorschemes, but only if terminal supports so.
 if &t_Co > 2 || has("gui_running")
     syntax on
-    silent! color nord
+    set background=dark
     set colorcolumn=80
+
+    " Less aggresisve colour for the colorcolumn background.
+    highlight ColorColumn ctermbg=8
 endif
 
 " Line numberings and relative numberings
@@ -48,6 +51,13 @@ imap <F5> <ESC>:set invrelativenumber<CR>i
 " (These settings don't look so pleasant when there are not enough colors).
 if &t_Co >= 256
     set cursorline
+
+    " Custom color configuration
+    highlight ColorColumn ctermbg=234
+    highlight TabLineFill ctermbg=234 cterm=NONE
+    highlight CursorLine cterm=NONE ctermbg=233
+    highlight LineNr ctermfg=8
+    highlight Folded ctermfg=240 ctermbg=232
 endif
 
 " Mark trailing spaces.
@@ -90,6 +100,12 @@ nmap <Leader>hp <Plug>GitGutterPrevHunk
 nmap <Leader>ha <Plug>GitGutterStageHunk
 nmap <Leader>hr <Plug>GitGutterUndoHunk
 nmap <Leader>hv <Plug>GitGutterPreviewHunk
+if &t_Co >= 2
+    " TODO: Decide if maybe changing DiffAdd/DiffChange/DiffDelete is better.
+    highlight GitGutterAdd ctermfg=Green cterm=Bold
+    highlight GitGutterDelete ctermfg=Red cterm=Bold
+    highlight GitGutterChange ctermfg=Yellow
+endif
 
 " undotree
 nmap <Leader>u :UndotreeToggle<CR>

@@ -60,7 +60,3 @@ Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink
 " Markdown productivity pack
 Plug 'plasticboy/vim-markdown'
 
-" Colorschemes
-Plug 'morhetz/gruvbox'
-Plug 'arcticicestudio/nord-vim'
-Plug 'sstallion/vim-wtf'
