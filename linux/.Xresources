@@ -1,5 +1,5 @@
 ! Colorscheme
-#include ".xresources.d/themes/nord.xresources"
+#include ".xresources.d/themes/sweetlove.xresources"
 
 ! xterm
 XTerm.vt100.font: envypn
