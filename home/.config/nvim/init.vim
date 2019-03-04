@@ -186,3 +186,19 @@ nmap <Leader>bg <Plug>BookmarkMoveToLine
 " markdown + vim-markdown
 let g:vim_markdown_frontmatter = 1
 autocmd FileType markdown set breakindent wrap linebreak
+
+" devicons
+let g:lightline = {
+      \ 'component_function': {
+      \   'filetype': 'LightlineFileTypeDevIcon',
+      \   'fileformat': 'LightlineFileFormatDevIcon',
+      \ }
+      \ }
+
+function! LightlineFileTypeDevIcon()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! LightlineFileFormatDevIcon()
+  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+endfunction
