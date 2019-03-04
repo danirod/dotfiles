@@ -120,21 +120,13 @@ nmap <Leader>b :BuffergatorToggle<CR>
 " NERDtree
 map <Leader>nt :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
-let NERDTreeWinSize=20
+let NERDTreeWinSize=35
 
 " tagbar
 nmap <F8> :TagbarOpen fj<CR>
 let g:tagbar_indent = 1
 let g:tagbar_autoshowtag = 1
-function DaniComputeTagbarWidth()
-    if winwidth(0) > 180
-        let g:tagbar_width = 40
-    else
-        let g:tagbar_width = 25
-    endif
-endfunction
-call DaniComputeTagbarWidth()
-autocmd VimResized * exe "call DaniComputeTagbarWidth()"
+let g:tagbar_width = 35
 
 " ack
 nnoremap <C-T> :Ack!<Space>
