@@ -1,5 +1,5 @@
 set $mod Mod1
-font:pango Fira Mono 10
+font:envypn 11
 
 # Colors
 set_from_resource $foreground       foreground #000000
@@ -161,5 +161,5 @@ client.urgent $red $red $red $red
 
 new_window pixel 1
 new_float pixel 1
-gaps inner 10
-gaps outer 0
+gaps inner 15
+gaps outer 30
