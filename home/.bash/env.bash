@@ -7,3 +7,5 @@ export BROWSER=dillo
 if [ -x /usr/bin/open ]; then
   export BROWSER=open
 fi
+
+export RIPGREP_CONFIG_PATH=~/.config/ripgrep/config
