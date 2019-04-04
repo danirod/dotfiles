@@ -5,4 +5,4 @@ function __prompt__exitcode() {
     [ $EXIT_CODE != 0 ] && echo -e "\001\033[1;31m\002"
 }
 
-export PS1="\`__prompt__exitcode\`\e[2m\u@\H\e[22m \w \$\[\e[0m\] "
+export PS1="\`__prompt__exitcode\`\e[2m\h\e[22m \w \$\[\e[0m\] "
