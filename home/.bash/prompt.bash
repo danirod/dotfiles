@@ -1,18 +1,8 @@
-__prompt() {
-  local EXIT_CODE="$?"
-  local blue='\[\e[1;34m\]'
-  local cyan='\[\e[1;36m\]'
-  local green='\[\e[1;32m\]'
-  local red='\[\e[1;31m\]'
-  local reset='\[\e[0m\]'
-
-  PS1="$blue\u$reset@$cyan\h$reset:$green\w"
-
-  if [ $EXIT_CODE != 0 ]; then
-    PS1="$PS1 $red[$EXIT_CODE]"
-  fi
-
-  PS1="$PS1$reset -> "
+function __prompt__exitcode() {
+    # Tints the prompt red if the last executed command returns non-zero
+    local EXIT_CODE="$?"
+    local red=`tput setaf 1`
+    [ $EXIT_CODE != 0 ] && echo -e "\001\033[1;31m\002"
 }
 
-export PROMPT_COMMAND=__prompt
+export PS1="\`__prompt__exitcode\`\e[2m\u@\H\e[22m \w \$\[\e[0m\] "
