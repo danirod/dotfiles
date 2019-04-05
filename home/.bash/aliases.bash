@@ -45,3 +45,11 @@ alias brew_install='brew bundle --global' # installs software in brewfile
 alias brew_check='brew bundle check --global' # checks
 alias brew_cleanable='brew bundle cleanup --global' # lists software to remove
 alias brew_clean='brew bundle cleanup --global --force' # removes
+
+# Internet radio
+alias kfma="mpg123 -@ http://playerservices.streamtheworld.com/pls/KFMAFM.pls"
+alias megastar="mpg123 -@ http://megastar.cope.stream.flumotion.com/cope/megastar-low.mp3.m3u"
+alias rockfm="mpg123 -@ http://rockfm.cope.stream.flumotion.com/cope/rockfm-low.mp3.m3u"
+alias cadenaser="mpg123 http://playerservices.streamtheworld.com/api/livestream-redirect/CADENASER.mp3"
+alias 40principales="mpg123 http://playerservices.streamtheworld.com/api/livestream-redirect/Los40.mp3"
+alias los40classic="mpg123 http://playerservices.streamtheworld.com/api/livestream-redirect/M80RADIO.mp3"
