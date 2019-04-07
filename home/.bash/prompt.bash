@@ -18,4 +18,4 @@ if [ $(LC_ALL=C type -t __git_ps1) == "function" ]; then
     export GIT_PS1_SHOWUNTRACKEDFILES GIT_PS1_SHOWUPSTREAM
 fi
 
-export PS1="\`__prompt__exitcode\`\e[2m\h\e[22m \w\[\e[1;33m\]\$(__git_ps1)\[\e[0m\] \$ "
+export PS1="\`__prompt__exitcode\`\[\e[2m\]\h\[\e[22m\] \w\[\e[1;33m\]\$(__git_ps1)\[\e[0m\] \$ "
