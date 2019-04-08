@@ -53,3 +53,20 @@ alias rockfm="mpg123 -@ http://rockfm.cope.stream.flumotion.com/cope/rockfm-low.
 alias cadenaser="mpg123 http://playerservices.streamtheworld.com/api/livestream-redirect/CADENASER.mp3"
 alias 40principales="mpg123 http://playerservices.streamtheworld.com/api/livestream-redirect/Los40.mp3"
 alias los40classic="mpg123 http://playerservices.streamtheworld.com/api/livestream-redirect/M80RADIO.mp3"
+
+# TaskWarior GTD
+# ==============
+
+# Faster TaskWarrior access (TODO: What about timewarrior?)
+alias t="task"
+
+function inbox() {
+    if [ $# -eq 0 ]; then
+        task inbox
+    else
+        task add +inbox "$@"
+    fi
+}
+
+# alias inbox='task add +inbox'
+alias tomorrow="inbox wait:tomorrow"
