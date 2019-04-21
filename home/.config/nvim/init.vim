@@ -188,9 +188,18 @@ autocmd FileType markdown set breakindent wrap linebreak
 
 " devicons
 let g:lightline = {
+      \ 'colorscheme': 'PaperColor_dark',
+      \ 'active': {
+      \    'left': [ [ 'mode', 'paste' ],
+      \              [ 'readonly', 'filename', 'modified' ] ],
+      \    'right': [ [ 'lineinfo' ],
+      \               [ 'percent' ],
+      \               [ 'gitbranch', 'filetype' ] ]
+      \ },
       \ 'component_function': {
       \   'filetype': 'LightlineFileTypeDevIcon',
       \   'fileformat': 'LightlineFileFormatDevIcon',
+      \   'gitbranch': 'fugitive#head',
       \ }
       \ }
 
