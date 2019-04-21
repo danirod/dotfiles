@@ -38,7 +38,7 @@ if &t_Co > 2 || has("gui_running")
     set colorcolumn=80
 
     " Less aggresisve colour for the colorcolumn background.
-    highlight ColorColumn ctermbg=8
+    highlight ColorColumn ctermbg=8 cterm=bold
 endif
 
 " Line numberings and relative numberings
@@ -52,12 +52,11 @@ imap <F5> <ESC>:set invrelativenumber<CR>i
 if &t_Co >= 256
     set cursorline
 
-    " Custom color configuration
-    highlight ColorColumn ctermbg=234
-    highlight TabLineFill ctermbg=234 cterm=NONE
-    highlight CursorLine cterm=NONE ctermbg=233
+    " Custom color configuration.
+    highlight CursorLine cterm=underline ctermbg=NONE
+    highlight Folded cterm=reverse ctermfg=8 ctermbg=0
+    highlight TabLineFill cterm=reverse ctermfg=8 ctermbg=0
     highlight LineNr ctermfg=8
-    highlight Folded ctermfg=240 ctermbg=232
 endif
 
 " Mark trailing spaces.
