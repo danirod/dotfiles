@@ -1,5 +1,4 @@
 " Vim productivity
-Plug 'ap/vim-buftabline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'mbbill/undotree'
@@ -61,5 +60,6 @@ Plug 'mdempsky/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink
 Plug 'plasticboy/vim-markdown'
 
 " Eye candy
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
