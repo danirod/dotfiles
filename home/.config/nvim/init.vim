@@ -38,7 +38,7 @@ if &t_Co > 2 || has("gui_running")
     set colorcolumn=80
 
     " Less aggresisve colour for the colorcolumn background.
-    highlight ColorColumn ctermbg=8 cterm=bold
+    highlight ColorColumn ctermbg=0 ctermfg=8 cterm=reverse
 endif
 
 " Line numberings and relative numberings
