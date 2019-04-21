@@ -186,27 +186,18 @@ nmap <Leader>bg <Plug>BookmarkMoveToLine
 let g:vim_markdown_frontmatter = 1
 autocmd FileType markdown set breakindent wrap linebreak
 
-" devicons
-let g:lightline = {
-      \ 'colorscheme': 'PaperColor_dark',
-      \ 'active': {
-      \    'left': [ [ 'mode', 'paste' ],
-      \              [ 'readonly', 'filename', 'modified' ] ],
-      \    'right': [ [ 'lineinfo' ],
-      \               [ 'percent' ],
-      \               [ 'gitbranch', 'filetype' ] ]
-      \ },
-      \ 'component_function': {
-      \   'filetype': 'LightlineFileTypeDevIcon',
-      \   'fileformat': 'LightlineFileFormatDevIcon',
-      \   'gitbranch': 'fugitive#head',
-      \ }
-      \ }
+" disable webicons on airline because it breaks if i customize the sections.
+" (I'll manually call webicons function where it makes sense on filetype).
+let g:webdevicons_enable_airline_statusline = 0
 
-function! LightlineFileTypeDevIcon()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+" airline
+let g:airline_powerline_fonts = 0
+let g:airline_theme='zenburn'
+let g:airline#extensions#tabline#enabled = 1
+function! AirlineInit()
+    let g:airline_section_b = airline#section#create([])
+    let g:airline_section_x = airline#section#create(['branch'])
+    let g:airline_section_y = airline#section#create(['%{WebDevIconsGetFileTypeSymbol()} ', 'filetype'])
+    let g:airline_section_z = airline#section#create(['%l:%c'])
 endfunction
-
-function! LightlineFileFormatDevIcon()
-  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-endfunction
+autocmd User AirlineAfterInit call AirlineInit()
