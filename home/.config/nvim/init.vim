@@ -159,11 +159,6 @@ let g:neosnippet#snippets_directory="~/.local/share/nvim/snippets/"
 let g:deoplete#sources#clang#clang_header = '/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include'
 let g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
 
-" syntastic
-let g:syntastic_check_on_open = 1
-let g:syntastic_c_config_file = '.syntastic_c_config'
-let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
-
 " echodoc
 let g:echodoc_enable_at_startup = 1
 

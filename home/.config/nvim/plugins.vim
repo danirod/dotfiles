@@ -36,12 +36,12 @@ Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/neco-syntax'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'leafgarland/typescript-vim'
-Plug 'vim-syntastic/syntastic'
 Plug 'ervandew/supertab'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/echodoc.vim'
 Plug 'michaeljsmith/vim-indent-object' " Let's be honest, this is written with python in mind
 Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
 
 " Python productivity pack
 Plug 'tmhedberg/SimpylFold', { 'for': ['python'] }
