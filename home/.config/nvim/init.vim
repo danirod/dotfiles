@@ -9,6 +9,10 @@ call plug#begin("~/.config/nvim/plugged/")
 source $HOME/.config/nvim/plugins.vim
 call plug#end()
 
+" Set the host environment for Python
+let g:python_host_prog  = simplify( stdpath('data') . '/python2/bin/python' )
+let g:python3_host_prog = simplify( stdpath('data') . '/python3/bin/python' )
+
 " Disable aditional files.
 set noswapfile " disable swapfiles (maybe a bad idea? 🤔)
 set nobackup " disable backup files (use git)
@@ -138,7 +142,6 @@ let g:vimwiki_list = [{'path': '~/.vimwiki'}]
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-let g:python3_host_prog='/home/danirod/opt/neovim-python/bin/python'
 let g:deoplete#sources#jedi#show_docstring = 1
 let g:LanguageClient_serverCommands = {
     \ 'javascript': ['javascript-typescript-stdio'],
