@@ -6,6 +6,17 @@ alias vim='nvim'
 # sudo
 alias fuck='sudo $(history -p \!\!)'
 
+# list opened ports. i call this alias planet because i always use "planet"
+# to remember the arguments to pass to netstat (-plnt).
+if [ `uname` == "Darwin" ]; then
+    # i am unable to remember the command
+    alias planet='lsof -iTCP -sTCP:LISTEN -nP'
+    alias suplanet='sudo lsof -iTCP -sTCP:LISTEN -nP'
+else
+    alias planet='netstat -plnt'
+    alias suplanet='sudo netstat -plnt'
+fi
+
 # bin/rails
 alias brc='bin/rails c'
 alias brs='bin/rails s'
