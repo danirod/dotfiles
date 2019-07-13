@@ -19,9 +19,6 @@ Plug 'honza/vim-snippets'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
-" Not productivity
-Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
-
 " Language productivity
 " Plug 'AndrewRadev/splitjoin.vim'
 Plug 'airblade/vim-gitgutter'
