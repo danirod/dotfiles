@@ -38,11 +38,9 @@ autocmd FileType python setlocal tw=79
 " Enable colorschemes, but only if terminal supports so.
 if &t_Co > 2 || has("gui_running")
     syntax on
+    silent! colorscheme dim
     set background=dark
     set colorcolumn=80
-
-    " Less aggresisve colour for the colorcolumn background.
-    highlight ColorColumn ctermbg=0 ctermfg=8 cterm=reverse
 endif
 
 " Line numberings and relative numberings
@@ -50,18 +48,6 @@ set number
 set relativenumber
 nmap <F5> :set invrelativenumber<CR>
 imap <F5> <ESC>:set invrelativenumber<CR>i
-
-" Mark cursor lines and columns, but only if there are enough colors.
-" (These settings don't look so pleasant when there are not enough colors).
-if &t_Co >= 256
-    set cursorline
-
-    " Custom color configuration.
-    highlight CursorLine cterm=underline ctermbg=NONE
-    highlight Folded cterm=reverse ctermfg=8 ctermbg=0
-    highlight TabLineFill cterm=reverse ctermfg=8 ctermbg=0
-    highlight LineNr ctermfg=8
-endif
 
 " Mark trailing spaces.
 if &t_Co >= 2
