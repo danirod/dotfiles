@@ -12,6 +12,8 @@
     ap = add -p
     am = commit --amend
     unadd = reset HEAD --
+    tupper = stash --include-untracked
+    staged = diff --staged
 
 [color]
     branch = auto
