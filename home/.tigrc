@@ -1,0 +1,1 @@
+bind main R !git rebase --autosquash -i %(commit)^1
