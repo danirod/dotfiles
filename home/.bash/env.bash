@@ -16,3 +16,5 @@ elif [ -x $(command -v dillo) ]; then
 fi
 
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/config
+
+export HTTPIE_CONFIG_DIR=~/.config/httpie/
