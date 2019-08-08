@@ -58,6 +58,7 @@ alias brew_clean='brew bundle cleanup --global --force' # removes
 
 # Internet radio
 alias kfma="mpg123 -@ http://playerservices.streamtheworld.com/pls/KFMAFM.pls"
+alias klpx="mpg123 -@ http://playerservices.streamtheworld.com/pls/KLPXFM.pls"
 alias megastar="mpg123 -@ http://megastar.cope.stream.flumotion.com/cope/megastar-low.mp3.m3u"
 alias rockfm="mpg123 -@ http://rockfm.cope.stream.flumotion.com/cope/rockfm-low.mp3.m3u"
 alias cadenaser="mpg123 http://playerservices.streamtheworld.com/api/livestream-redirect/CADENASER.mp3"
