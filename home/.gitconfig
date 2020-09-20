@@ -54,3 +54,5 @@
     prompt = false
 [interactive]
 	diffFilter = diff-highlight
+[init]
+	defaultBranch = trunk
