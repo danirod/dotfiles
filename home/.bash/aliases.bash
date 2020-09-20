@@ -2,6 +2,9 @@
 alias ll='ls -alFh'
 alias la='ls -A'
 
+# dotfiles
+alias dotfiles='git -C ~/.dotfiles'
+
 # sudo
 alias fuck='sudo $(history -p \!\!)'
 
