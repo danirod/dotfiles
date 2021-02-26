@@ -1,1 +1,4 @@
+set line-graphics = utf-8
+set mouse = yes
+
 bind main R !git rebase --autosquash -i %(commit)^1

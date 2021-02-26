@@ -53,11 +53,15 @@ alias gamend='git commit --amend'
 alias gammend='git commit --amend'
 
 # Homebrew for macOS
-# TODO: Disable these aliases on Linux (or get Linuxbrew, whatever)
-alias brew_install='brew bundle --global' # installs software in brewfile
-alias brew_check='brew bundle check --global' # checks
-alias brew_cleanable='brew bundle cleanup --global' # lists software to remove
-alias brew_clean='brew bundle cleanup --global --force' # removes
+GLOBAL_BREWFILE="~/Library/Brewfile"
+# Install packages declared in the Brewfile
+alias brew_install="brew bundle --file=$GLOBAL_BREWFILE"
+# Check packages present in Brewfile but not installed
+alias brew_check="brew bundle check --file=$GLOBAL_BREWFILE"
+# List rogue software not declared in the Brewfile
+alias brew_cleanable="brew bundle cleanup --file=$GLOBAL_BREWFILE"
+# Remove software not declared in Brewfile
+alias brew_clean="brew bundle cleanup --file=$GLOBAL_BREWFILE --force"
 
 # Internet radio
 alias kfma="mpg123 -@ http://playerservices.streamtheworld.com/pls/KFMAFM.pls"
