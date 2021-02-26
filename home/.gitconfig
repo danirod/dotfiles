@@ -14,6 +14,7 @@
     unadd = reset HEAD --
     tupper = stash --include-untracked
     staged = diff --staged
+	mb = merge-base --fork-point
 	addcw = -c interactive.diffFilter=\"git diff --color-words\" add -p
 
 [color]
@@ -52,7 +53,21 @@
 
 [difftool]
     prompt = false
-[interactive]
-	diffFilter = diff-highlight
 [init]
 	defaultBranch = trunk
+[interactive]
+	diffFilter = diff-highlight
+
+[pager]
+	diff = diff-highlight | less
+	log = diff-highlight | less
+	show = diff-highlight | less
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[diff "rails_enc"]
+  textconv = rails encrypted:show
+  cachetextconv = false

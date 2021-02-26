@@ -1,4 +1,4 @@
 ---
-install: --no-ri --no-rdoc --bindir=~/.local/bin
+install: --no-ri --no-rdoc
 update: --no-ri --no-rdoc
 
