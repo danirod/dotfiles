@@ -1,3 +1,0 @@
-#!/bin/bash
-
-[ $(lid-status) == "closed" ] && exit 1 || exit 0

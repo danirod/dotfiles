@@ -2,10 +2,12 @@
 
 ## About
 
-These are my system dotfiles. These files manage settings for the software and
-operating systems I use. I move around macOS, Arch Linux and Debian and these
-are the supported operating systems for these dotfiles. Feel free to look and
-take what you want, but keep in mind that this is MY opinionated config.
+These dotfiles contain the current configuration of my supported machines.
+
+Feel free to look around and take what you want, but keep in mind that these
+are MY opinionated settings and that there is a risk if you simply take these
+files and use them as is that they won't work or that they will break stuff.
+No refunds!
 
 If you still don't do, take some time to organize your dotfiles inside a Git
 repository. You'll gain some advantages: versioning your config so you can make
@@ -17,24 +19,20 @@ multiple computers via Git; backup for setting new systems after a format.
 * `home` directory: common configuration for shared applications:
   bash, tmux, neovim, neomutt, irssi...
 * `mac` directory: macOS specific dotfiles: system settings, reset script...
-* `linux` directory: Linux/X11 specific dotfiles: xinit, i3, compton, fonts...
-* linux-work directory: particular settings that are only useful for my
-  work laptop (i.e. not my raspberry or other generical Linux systems).
-* systemwide: **do not symlink this directory**, as it contains files that
-  belong to /etc, /usr or other directories outside $HOME.
+* `freebsd` directory: FreeBSD specific dotfiles for my hacking machine.
 
 ## Usage
 
 Place a symlink on the appropiate location for each dotfile pointing to a file
 on this repo. For instance, ~/.bashrc should be a symlink pointing to
-~/.dotfiles/home/.bashrc. That way, if ~/.bashrc gets modified, your ~/.dotfiles
-working directory gets modified and you can make a commit.
+~/.dotfiles/home/.bashrc. That way, if ~/.bashrc gets modified, your
+~/.dotfiles working directory gets modified and you can make a commit.
 
 This repo is optimized for [GNU Stow](https://www.gnu.org/s/stow). You should
 install GNU Stow as it makes this _symlink_ process automated. (There are many
 other reasons on why you should use GNU Stow). After installing Stow, cd to
 ~/.dotfiles and run `stow home` to make symlinks on your home directory for each
-file in `home` automatically. Run `stow linux` or `stow mac` to symlink
+file in `home` automatically. Run `stow freebsd` or `stow mac` to symlink
 additional dotfiles appropiately.
 
 ## Installation scripts
@@ -49,9 +47,16 @@ dpkg (Debian) is pending to be done.
   place the Brewfile in ~/.Brewfile. Then run `brew bundle --global`. This will
   add taps and formulaes declared in the Brewfile.
 
+* FreeBSD: (TODO:) Export and clean the output of `pkg prime-list` to get the
+  list of essential packages to install after a clean FreeBSD installation.
+
 ## Changelog
 
-The repository layout was changed on Jan 2018 and I removed support for software
-I didn't use anymore, such as zsh, openbox, powershell and windows/msys. If
-you're looking for that, checkout older commits. Additional branches and tags
-for historic reasons are pending to be made.
+March 2021: Given that I fully migrated to FreeBSD and that I don't touch
+a lot of GNU/Linux boxes these days, I've removed `linux` and `linux-work`
+directories.
+
+January 2018: The repository layout was changed and I removed support for
+software I didn't use anymore, such as zsh, openbox, powershell and
+windows/msys. If you're looking for that, checkout older commits. Additional
+branches and tags for historic reasons are pending to be made.
