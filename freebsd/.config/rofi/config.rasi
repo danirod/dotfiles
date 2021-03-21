@@ -1,0 +1,13 @@
+configuration {
+	show-icons: true;
+	font: "Greybeard 12";
+	theme: "theme";
+
+	width: 50;
+	lines: 20;
+	columns: 2;
+	bw: 10;
+
+	modi: "drun,window,run";
+	drun-display-format: "{name}";
+}

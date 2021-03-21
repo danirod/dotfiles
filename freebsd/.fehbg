@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/danirod/.wallpaper' #  --bg-fill '/home/danirod/.wallpaper'

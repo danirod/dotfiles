@@ -1,0 +1,10 @@
+@import "base16-atelier-forest.rasi"
+
+element-icon {
+	size: 20px;
+}
+
+element-text {
+	padding: 0 10px;
+	vertical-align: 0.5;
+}

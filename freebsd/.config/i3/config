@@ -1,0 +1,135 @@
+set $mod Mod4
+set $alt Mod1
+
+# window borders. oh who cares, titles will be disabled anyway
+font xft:Greybeard Bold 11
+
+# window positioning
+new_window pixel 1
+new_float pixel 1
+gaps outer 10
+gaps top 0
+gaps inner 30
+
+# color theme (load from xresources)
+set_from_resource $foreground       foreground #000000
+set_from_resource $background       background #000000
+set_from_resource $darkblack        color0  #000000
+set_from_resource $black            color8  #000000
+set_from_resource $darkred          color1  #000000
+set_from_resource $red              color9  #000000
+set_from_resource $darkgreen        color2  #000000
+set_from_resource $green            color10 #000000
+set_from_resource $darkyellow       color3  #000000
+set_from_resource $yellow           color11 #000000
+set_from_resource $darkblue         color4  #000000
+set_from_resource $blue             color12 #000000
+set_from_resource $darkmagenta      color5  #000000
+set_from_resource $magenta          color13 #000000
+set_from_resource $darkleafgreen    color6  #000000
+set_from_resource $leafgreen        color14 #000000
+set_from_resource $darkwhite        color7  #000000
+set_from_resource $white            color15 #000000
+
+client.focused $green $green $foreground $green
+client.unfocused $background $background $foreground $background
+client.focused_inactive $background $background $foreground $background
+client.urgent $red $red $red $red
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start and stop
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+Shift+q kill
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+ntilde focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+ntilde move right
+
+# aditional window management
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+a focus parent
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Configure left monitor
+set $mon_l "DP-4"
+set $wsl1 "1L"
+set $wsl2 "2L"
+set $wsl3 "3L"
+set $wsl4 "4L"
+workspace $wsl1 output $mon_l
+workspace $wsl2 output $mon_l
+workspace $wsl3 output $mon_l
+workspace $wsl4 output $mon_l
+
+# Configure right monitor
+set $mon_r "HDMI-0"
+set $wsr1 "1R"
+set $wsr2 "2R"
+set $wsr3 "3R"
+set $wsr4 "4R"
+workspace $wsr1 output $mon_r
+workspace $wsr2 output $mon_r
+workspace $wsr3 output $mon_r
+workspace $wsr4 output $mon_r
+
+# switch to workspace
+bindsym $mod+1 workspace $wsl1
+bindsym $mod+2 workspace $wsl2
+bindsym $mod+3 workspace $wsl3
+bindsym $mod+4 workspace $wsl4
+bindsym $mod+7 workspace $wsr1
+bindsym $mod+8 workspace $wsr2
+bindsym $mod+9 workspace $wsr3
+bindsym $mod+0 workspace $wsr4
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $wsl1
+bindsym $mod+Shift+2 move container to workspace $wsl2
+bindsym $mod+Shift+3 move container to workspace $wsl3
+bindsym $mod+Shift+4 move container to workspace $wsl4
+bindsym $mod+Shift+7 move container to workspace $wsr1
+bindsym $mod+Shift+8 move container to workspace $wsr2
+bindsym $mod+Shift+9 move container to workspace $wsr3
+bindsym $mod+Shift+0 move container to workspace $wsr4
+
+# i3 management
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'EXIT?' -B 'EXIT!' 'i3-msg exit'"
+
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym ntilde resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id compton
