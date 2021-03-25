@@ -1,0 +1,55 @@
+env:
+  TERM: xterm-256color
+window:
+  padding:
+    x: 10
+    y: 10
+font:
+  normal:
+    family: Monaco
+    style: Regular
+  size: 11.0
+background_opacity: 1
+
+# Colors (Nord)
+colors:
+   # Default colors
+   primary:
+     background: '#2E3440'
+     foreground: '#D8DEE9'
+
+   # Normal colors
+   normal:
+     black:   '#3B4252'
+     red:     '#BF616A'
+     green:   '#A3BE8C'
+     yellow:  '#EBCB8B'
+     blue:    '#81A1C1'
+     magenta: '#B48EAD'
+     cyan:    '#88C0D0'
+     white:   '#E5E9F0'
+
+   # Bright colors
+   bright:
+     black:   '#4C566A'
+     red:     '#BF616A'
+     green:   '#A3BE8C'
+     yellow:  '#EBCB8B'
+     blue:    '#81A1C1'
+     magenta: '#B48EAD'
+     cyan:    '#8FBCBB'
+     white:   '#ECEFF4'
+
+# Alacritty on macOS seems to assume that my keyboard distribution is English.
+# Usanians always assuming things about the rest of the world, eh. These
+# bindings are designed for the es-ES keyboard layout.
+key_bindings:
+  - { key: 10, mods: Alt, chars: "\\" }
+  - { key: 18, mods: Alt, chars: "|" }
+  - { key: 19, mods: Alt, chars: "@" }
+  - { key: 20, mods: Alt, chars: "#" }
+  - { key: 23, mods: Alt, chars: "¬" }
+  - { key: 33, mods: Alt, chars: "[" }
+  - { key: 30, mods: Alt, chars: "]" }
+  - { key: 39, mods: Alt, chars: "{" }
+  - { key: 42, mods: Alt, chars: "}" }
