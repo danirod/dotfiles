@@ -1,12 +1,12 @@
 [colors]
 background = ${xrdb:background}
-background-accent-1 = ${xrdb:color8}
-background-accent-2 = ${xrdb:color6}
+background-accent-1 = ${xrdb:color0}
+background-accent-2 = ${xrdb:color4}
 foreground = ${xrdb:foreground}
 foreground-accent-1 = ${xrdb:foreground}
 foreground-accent-2 = ${xrdb:color0}
-primary = ${xrdb:color2}
-secondary = ${xrdb:color3}
+primary = ${xrdb:color4}
+secondary = ${xrdb:color6}
 transparent = #00000000
 
 [bar/default]

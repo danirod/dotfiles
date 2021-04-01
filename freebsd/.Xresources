@@ -1,5 +1,5 @@
 ! Colorscheme
-#include ".xresources.d/base16-atelier-forest-256.Xresources"
+#include ".xresources.d/nord.xresources"
 
 URxvt*termName: rxvt-unicode
 URxvt*font: xft:Greybeard:style=Regular:size=11

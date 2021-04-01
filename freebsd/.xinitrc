@@ -7,6 +7,6 @@ export TERMINAL=alacritty
 
 xrdb -merge ~/.Xresources
 
-~/.fehbg
+hsetroot -solid '#3b4252'
 
 exec i3

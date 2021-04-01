@@ -31,7 +31,7 @@ set_from_resource $leafgreen        color14 #000000
 set_from_resource $darkwhite        color7  #000000
 set_from_resource $white            color15 #000000
 
-client.focused $green $green $foreground $green
+client.focused $blue $blue $foreground $blue
 client.unfocused $background $background $foreground $background
 client.focused_inactive $background $background $foreground $background
 client.urgent $red $red $red $red
