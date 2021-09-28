@@ -23,14 +23,9 @@ elif [ -x /usr/share/git-core/contrib/diff-highlight/diff-highlight ]; then
 fi
 
 # rbenv
-if [ -x $(command -v rbenv) ]; then
-	eval "$(rbenv init -)"
-fi
-
-# nodenv
-if [ -x $(command -v nodenv) ]; then
-	eval "$(nodenv init -)"
-fi
+command -v rbenv >/dev/null && eval "$(rbenv init -)"
+command -v nodenv >/dev/null && eval "$(nodenv init -)"
+command -v goenv >/dev/null && eval "$(goenv init -)"
 
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/config
 

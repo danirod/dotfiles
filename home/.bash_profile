@@ -1,4 +1,6 @@
-
+[ -d $HOME/.nodenv/bin ] && PATH="$PATH:$HOME/.nodenv/bin"
+[ -d $HOME/.rbenv/bin ] && PATH="$PATH:$HOME/.rbenv/bin"
+[ -d $HOME/.goenv/bin ] && PATH="$PATH:$HOME/.goenv/bin"
 source ~/.bash/env.bash
 
 export FLATPAK_ROOT=/var/lib/flatpak
