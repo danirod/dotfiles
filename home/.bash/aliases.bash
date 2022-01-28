@@ -51,6 +51,7 @@ alias gco='git commit'
 alias gcheck='git checkout'
 alias gamend='git commit --amend'
 alias gammend='git commit --amend'
+alias gone="git branch -vv | grep gone | awk '{ print \$1 }'"
 
 # Homebrew for macOS
 GLOBAL_BREWFILE="~/Library/Brewfile"

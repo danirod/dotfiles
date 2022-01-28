@@ -2,54 +2,67 @@ env:
   TERM: xterm-256color
 window:
   padding:
-    x: 10
-    y: 10
+    x: 30
+    y: 30
+  decorations: full
 font:
   normal:
-    family: Monaco
-    style: Regular
-  size: 11.0
+    family: Menlo
+  size: 13
+  use_thin_strokes: true
 background_opacity: 1
-
-# Colors (Nord)
 colors:
-   # Default colors
-   primary:
-     background: '#2E3440'
-     foreground: '#D8DEE9'
-
-   # Normal colors
-   normal:
-     black:   '#3B4252'
-     red:     '#BF616A'
-     green:   '#A3BE8C'
-     yellow:  '#EBCB8B'
-     blue:    '#81A1C1'
-     magenta: '#B48EAD'
-     cyan:    '#88C0D0'
-     white:   '#E5E9F0'
-
-   # Bright colors
-   bright:
-     black:   '#4C566A'
-     red:     '#BF616A'
-     green:   '#A3BE8C'
-     yellow:  '#EBCB8B'
-     blue:    '#81A1C1'
-     magenta: '#B48EAD'
-     cyan:    '#8FBCBB'
-     white:   '#ECEFF4'
-
-# Alacritty on macOS seems to assume that my keyboard distribution is English.
-# Usanians always assuming things about the rest of the world, eh. These
-# bindings are designed for the es-ES keyboard layout.
+  name: Ocean (dark)
+  author: Chris Kempson
+  primary:
+    background: "#2b303b"
+    foreground: "#c0c5ce"
+  cursor:
+    text: "#2b303b"
+    cursor: "#c0c5ce"
+  normal:
+    black: "#2b303b"
+    red: "#bf616a"
+    green: "#a3be8c"
+    yellow: "#ebcb8b"
+    blue: "#8fa1b3"
+    magenta: "#b48ead"
+    cyan: "#96b5b4"
+    white: "#c0c5ce"
+  bright:
+    black: "#65737e"
+    red: "#bf616a"
+    green: "#a3be8c"
+    yellow: "#ebcb8b"
+    blue: "#8fa1b3"
+    magenta: "#b48ead"
+    cyan: "#96b5b4"
+    white: "#eff1f5"
 key_bindings:
-  - { key: 10, mods: Alt, chars: "\\" }
-  - { key: 18, mods: Alt, chars: "|" }
-  - { key: 19, mods: Alt, chars: "@" }
-  - { key: 20, mods: Alt, chars: "#" }
-  - { key: 23, mods: Alt, chars: "¬" }
-  - { key: 33, mods: Alt, chars: "[" }
-  - { key: 30, mods: Alt, chars: "]" }
-  - { key: 39, mods: Alt, chars: "{" }
-  - { key: 42, mods: Alt, chars: "}" }
+  - key: 10
+    mods: Alt
+    chars: \
+  - key: 18
+    mods: Alt
+    chars: "|"
+  - key: 19
+    mods: Alt
+    chars: "@"
+  - key: 20
+    mods: Alt
+    chars: "#"
+  - key: 23
+    mods: Alt
+    chars: ¬
+  - key: 33
+    mods: Alt
+    chars: "["
+  - key: 30
+    mods: Alt
+    chars: "]"
+  - key: 39
+    mods: Alt
+    chars: "{"
+  - key: 42
+    mods: Alt
+    chars: "}"
