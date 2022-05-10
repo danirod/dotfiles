@@ -27,6 +27,9 @@ command -v rbenv >/dev/null && eval "$(rbenv init -)"
 command -v nodenv >/dev/null && eval "$(nodenv init -)"
 command -v goenv >/dev/null && eval "$(goenv init -)"
 
+# cargo
+[ -f ~/.cargo/env ] && . ~/.cargo/env
+
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/config
 
 export HTTPIE_CONFIG_DIR=~/.config/httpie/
