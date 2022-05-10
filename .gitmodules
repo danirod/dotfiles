@@ -1,0 +1,6 @@
+[submodule "home/.emacs.d"]
+	path = home/.emacs.d
+	url = git@github.com:danirod/.emacs.d
+[submodule "home/.vim"]
+	path = home/.vim
+	url = git@github.com:danirod/vimrc
