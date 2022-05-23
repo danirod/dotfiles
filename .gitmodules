@@ -4,3 +4,6 @@
 [submodule "home/.vim"]
 	path = home/.vim
 	url = git@github.com:danirod/vimrc
+[submodule "home/.tmux/plugins/tpm"]
+	path = home/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
