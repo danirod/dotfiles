@@ -25,5 +25,6 @@ for f in ~/.bash/local.d/*.bash; do
     if [ -x $f ]; then . $f; fi
 done
 
+source ~/.bash/taskwarrior.bash
 bash ~/.bash/applets/task.bash
 
