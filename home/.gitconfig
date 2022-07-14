@@ -13,8 +13,8 @@
     ap = add -p
     am = commit --amend
     unadd = reset HEAD --
-    tupper = stash --include-untracked
     staged = diff --staged
+    stash-layer = stash -k -u # hides everything not added for a commit
 	mb = merge-base --fork-point
 	addcw = -c interactive.diffFilter=\"git diff --color-words\" add -p
 
