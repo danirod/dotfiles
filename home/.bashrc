@@ -24,3 +24,6 @@ source ~/.bash/prompt.bash
 for f in ~/.bash/local.d/*.bash; do
     if [ -x $f ]; then . $f; fi
 done
+
+bash ~/.bash/applets/task.bash
+
