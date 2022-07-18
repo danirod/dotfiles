@@ -1,0 +1,77 @@
+# Brewfile
+
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "universal-ctags/universal-ctags"
+
+# system tools
+brew "bash"
+brew "curl"
+cask "emacs"
+brew "httpie"
+brew "macvim"
+brew "minio-mc"
+brew "p7zip"
+brew "pandoc"
+brew "stow"
+brew "tmux"
+brew "wget"
+cask "avibrazil-rdm"
+cask "disk-inventory-x"
+cask "dozer"
+cask "gpg-suite"
+
+# desktop software
+cask "bitwarden"
+cask "discord"
+cask "epoch-flip-clock"
+cask "firefox"
+cask "keepassxc"
+# cask "screenflow" # i don't always purchase the latest version
+cask "pine"
+cask "rectangle"
+
+# programming tools
+brew "bear"
+brew "cmake"
+brew "mkdocs"
+brew "git"
+brew "jq"
+brew "the_silver_searcher"
+brew "tig"
+brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+cask "kitty"
+cask "rowanj-gitx"
+
+# services
+brew "postgresql", restart_service: true
+brew "redis", restart_service: true
+
+# programming languages
+brew "elixir"
+brew "imagemagick"
+brew "llvm"
+brew "node-build"
+brew "nodenv"
+brew "rbenv"
+brew "rbenv-gemset"
+brew "ruby-build"
+
+# kernel development
+brew "qemu"
+brew "xorriso"
+
+# mac app store -- broken, install shit manually
+# mas "Agenda", id: 1287445660
+# mas "Amphetamine", id: 937984704
+# mas "Battery Monitor", id: 836505650
+# mas "Bear", id: 1091189122
+# mas "CotEditor", id: 1024640650
+# mas "Drafts", id: 1435957248
+# mas "Keynote", id: 409183694
+# mas "Numbers", id: 409203825
+# mas "Pages", id: 409201541
+# mas "Pocket", id: 568494494
+# mas "Telegram", id: 747648890
