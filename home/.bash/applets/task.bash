@@ -3,6 +3,7 @@ taskwarrior_detect() {
 		return 0
 	else
 		echo "   ❌ taskwarrior not detected in this system"
+		return 1
 	fi
 }
 
@@ -24,15 +25,13 @@ taskwarrior_report_line() {
 
 taskwarrior_report() {
 	echo
-	if ! taskwarrior_detect ; then
-		return 0
+	if taskwarrior_detect ; then
+		taskwarrior_report_line "$(task count +OVERDUE)" "⏰" "is OVERDUE" "are OVERDUE" "task overdue" "$(tput setaf 9)"
+		taskwarrior_report_line "$(task count +READY +TODAY)" "🔥" "is due today" "are due today" "task +TODAY" "$(tput setaf 11)"
+		taskwarrior_report_line "$(task count +READY +TOMORROW)" "📅" "is due tomorrow" "are due tomorrow" "task +TOMORROW" "$(tput setaf 14)"
+		taskwarrior_report_line "$(task count +ACTIVE)" "✅" "is active" "are active" "task active" "$(tput setaf 10)"
+		taskwarrior_report_line "$(task count +WAITING)" "⌛" "is waiting" "are waiting" "task waiting" "$(tput setaf 8)"
 	fi
-
-	taskwarrior_report_line "$(task count +OVERDUE)" "⏰" "is OVERDUE" "are OVERDUE" "task overdue" "$(tput setaf 9)"
-	taskwarrior_report_line "$(task count +READY +TODAY)" "🔥" "is due today" "are due today" "task +TODAY" "$(tput setaf 11)"
-	taskwarrior_report_line "$(task count +READY +TOMORROW)" "📅" "is due tomorrow" "are due tomorrow" "task +TOMORROW" "$(tput setaf 14)"
-	taskwarrior_report_line "$(task count +ACTIVE)" "✅" "is active" "are active" "task active" "$(tput setaf 10)"
-	taskwarrior_report_line "$(task count +WAITING)" "⌛" "is waiting" "are waiting" "task waiting" "$(tput setaf 8)"
 	echo
 }
 
