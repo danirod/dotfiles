@@ -1,2 +1,4 @@
 home/.bash/local.d/
 home/.tmux/local.d/
+home/.tmux/plugins/
+!home/.tmux/plugins/tpm
