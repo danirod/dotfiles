@@ -1,0 +1,37 @@
+#define background #181818
+#define foreground #b9b9b9
+#define black #191919
+#define red #ed4a46
+#define green #70b433
+#define yellow #dbb33d
+#define blue #368aeb
+#define magenta #eb6eb7
+#define cyan #3fc5b7
+#define white #b9b9b9
+#define bblack #777777
+#define bred #ff5e56
+#define byellow #efc541
+#define bgreen #83c746
+#define bblue #4f9cfe
+#define bmagenta #ff81ca
+#define bcyan #56d8c9
+#define bwhite #dedede
+
+*.background: background
+*.foreground: foreground
+*.color0: black
+*.color8: bblack
+*.color1: red
+*.color9: bred
+*.color2: green
+*.color10: bgreen
+*.color3: yellow
+*.color11: byellow
+*.color4: blue
+*.color12: bblue
+*.color5: magenta
+*.color13: bmagenta
+*.color6: cyan
+*.color14: bcyan
+*.color7: white
+*.color15: bwhite
