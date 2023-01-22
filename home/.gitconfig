@@ -57,12 +57,12 @@
 [init]
 	defaultBranch = trunk
 [interactive]
-	diffFilter = diff-highlight
+	diffFilter = diff-so-fancy --patch
 
 [pager]
-	diff = diff-highlight | less
-	log = diff-highlight | less
-	show = diff-highlight | less
+    diff = diff-so-fancy | less --tabs=4 -RFX
+    log = diff-so-fancy | less --tabs=4 -RFX
+    show = diff-so-fancy | less --tabs=4 -RFX
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -72,3 +72,5 @@
 [diff "rails_enc"]
   textconv = rails encrypted:show
   cachetextconv = false
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
