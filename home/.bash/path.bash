@@ -23,3 +23,5 @@ fi
 # Local .bin directories
 [ -d $HOME/.bin ] && PATH="$PATH:$HOME/.bin"
 [ -d $HOME/.local/bin ] && PATH="$PATH:$HOME/.local/bin"
+
+[ -d $HOME/go/bin ] && PATH="$PATH:$HOME/go/bin"

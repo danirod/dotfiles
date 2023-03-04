@@ -11,7 +11,7 @@ xrdb -merge ~/.Xresources
 xrandr --output DP-4 --above DP-0
 
 # Wallpaper and background
-hsetroot -solid '#3b4252'
+hsetroot -solid '#161b22'
 
 # gnome-keyring
 export $(gnome-keyring-daemon --start)
@@ -20,5 +20,7 @@ export $(gnome-keyring-daemon --start)
 export GTK_THEME=Adwaita:dark
 
 dunst &
+
+source $HOME/.bash_profile
 
 exec i3

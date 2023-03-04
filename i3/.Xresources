@@ -4,8 +4,8 @@
 Xft.dpi: 96
 
 URxvt*termName: rxvt-unicode
-URxvt*font: xft:Greybeard:style=Regular:size=11
-URxvt*boldFont: xft:Greybeard:style=bold:size=11
+URxvt*font: xft:GoMono Nerd Font:style=Regular:size=11
+URxvt*boldFont: xft:GoMono Nerd Font:style=bold:size=11
 URxvt.intensityStyles: true
 URxvt.scrollBar: false
 URxvt.internalBorder: 10

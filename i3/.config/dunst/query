@@ -8,4 +8,4 @@ else
 	DND="";
 fi
 
-echo "${DND}✉"
+echo "${DND} BEL"

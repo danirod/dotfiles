@@ -6,7 +6,7 @@ window:
     y: 10
 font:
   normal:
-    family: Greybeard 15px
+    family: GoMono Nerd Font
     style: Regular
   size: 11.0
   offset:

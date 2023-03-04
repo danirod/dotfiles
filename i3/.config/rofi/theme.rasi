@@ -2,7 +2,7 @@
 @import "everforest.rasi"
 
 * {
-	font: "Greybeard 16px 12";
+	font: "GoMono Nerd Font 12";
 	bg0: #282828;
 	bg1: #474747;
 	fg0: #dedede;

@@ -2,7 +2,7 @@
 
 configuration {
 	show-icons: true;
-	font: "Greybeard 15px 11";
+	font: "GoMono Nerd Font 11";
 
 	width: 50;
 	lines: 20;

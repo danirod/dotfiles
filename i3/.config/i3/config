@@ -7,9 +7,9 @@ font xft:Greybeard 16px Bold 12
 # window positioning
 new_window pixel 2
 new_float pixel 2
-gaps outer 2
-gaps top 2
-gaps inner 4
+gaps outer 10
+gaps top 10
+gaps inner 15
 
 # color theme (load from xresources)
 set_from_resource $foreground       foreground #000000
@@ -32,7 +32,7 @@ set_from_resource $darkwhite        color7  #000000
 set_from_resource $white            color15 #000000
 
 client.focused $green $green $foreground $green
-client.unfocused $background $background $foreground $background
+client.unfocused $background $background $white $background
 client.focused_inactive $background $background $foreground $background
 client.urgent $red $red $red $red
 
@@ -132,5 +132,4 @@ bindsym $mod+r mode "resize"
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id compton
 exec_always --no-startup-id nm-applet
