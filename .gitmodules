@@ -1,9 +1,3 @@
-[submodule "home/.emacs.d"]
-	path = home/.emacs.d
-	url = git@github.com:danirod/.emacs.d
-[submodule "home/.vim"]
-	path = home/.vim
-	url = git@github.com:danirod/vimrc
 [submodule "home/.tmux/plugins/tpm"]
 	path = home/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
