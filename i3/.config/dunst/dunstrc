@@ -7,14 +7,16 @@
 
     width = 600
     height = 240
-    origin = top-center
-    offset = 0x50
+    origin = top-right
+    offset = 20x65
     padding = 8
     horizontal_padding = 8
     text_icon_padding = 8
     gap_size = 8
 
-    font = GoMono Nerd Font 11
+    frame_width = 0
+
+    font = Ubuntu Mono 12
     markup = full
     format = "<b>%s</b>\n%b"
     alignment = left
@@ -35,7 +37,6 @@
     always_run_script = true
     title = Dunst
     class = Dunst
-    corner_radius = 5
     ignore_dbusclose = false
 
     mouse_left_click = do_action, close_current
@@ -43,15 +44,14 @@
     mouse_right_click = context
 
 [urgency_low]
-    background = "#282828"
-    foreground = "#b9b9b9"
+    background = "#2e3440"
+    foreground = "#eceff4"
     timeout = 10
 [urgency_normal]
-    background = "#70b433"
-    foreground = "#282828"
+    background = "#434c5e"
+    foreground = "#eceff4"
     timeout = 10
 [urgency_critical]
-    background = "#eb6eb7"
-    foreground = "#282828"
-    frame_color = "#ff0000"
+    background = "#bf616a"
+    foreground = "#eceff4"
     timeout = 0

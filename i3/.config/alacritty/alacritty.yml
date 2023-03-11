@@ -1,52 +1,14 @@
+import:
+  - ~/.config/alacritty/nord.yml
+
 env:
   TERM: xterm-256color
 window:
   padding:
-    x: 10
-    y: 10
+    x: 20
+    y: 20
 font:
   normal:
-    family: GoMono Nerd Font
+    family: Ubuntu Mono
     style: Regular
-  size: 11.0
-  offset:
-    y: 2
-window_opacity: 0.9
-
-# Colors
-colors:
-  # Default colors
-  primary:
-    background: '#181818'
-    foreground: '#B9B9B9'
-
-  # Normal colors
-  normal:
-    black:   '#191919'
-    red:     '#ED4A46'
-    green:   '#70B433'
-    yellow:  '#DBB32D'
-    blue:    '#368AEB'
-    magenta: '#EB6EB7'
-    cyan:    '#3FC5B7'
-    white:   '#B9B9B9'
-
-  # Bright colors
-  bright:
-    black:   '#777777'
-    red:     '#FF5E56'
-    green:   '#EFC541'
-    yellow:  '#83C746'
-    blue:    '#4F9CFE'
-    magenta: '#FF81CA'
-    cyan:    '#56D8C9'
-    white:   '#DEDEDE'
-
-  indexed_colors:
-   - { index: 16, color: '0xdf5321' }
-   - { index: 17, color: '0xc33ff3' }
-   - { index: 18, color: '0x2c2421' }
-   - { index: 19, color: '0x68615e' }
-   - { index: 20, color: '0x9c9491' }
-   - { index: 21, color: '0xe6e2e0' }
-
+  size: 13.0

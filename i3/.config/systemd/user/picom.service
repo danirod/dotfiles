@@ -1,0 +1,7 @@
+[Unit]
+Description=picom compositor
+Documentation=man:picom(1)
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/picom

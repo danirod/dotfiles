@@ -1,15 +1,12 @@
 set $mod Mod4
 set $alt Mod1
 
-# window borders. oh who cares, titles will be disabled anyway
-font xft:Greybeard 16px Bold 12
+font xft:Ubuntu Mono 13
 
 # window positioning
-new_window pixel 2
-new_float pixel 2
-gaps outer 10
-gaps top 10
-gaps inner 15
+new_window pixel 0
+new_float pixel 0
+gaps inner 20
 
 # color theme (load from xresources)
 set_from_resource $foreground       foreground #000000
@@ -41,14 +38,16 @@ floating_modifier $mod
 
 # start and stop
 bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec $HOME/.config/rofi/apps.sh
+bindsym $mod+Shift+d exec $HOME/.config/rofi/run.sh
+
 bindsym $mod+Shift+q kill
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ntilde focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -57,8 +56,7 @@ bindsym $mod+Shift+l move up
 bindsym $mod+Shift+ntilde move right
 
 # aditional window management
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+v split toggle
 bindsym $mod+a focus parent
 
 bindsym $mod+f fullscreen toggle
@@ -70,51 +68,41 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # Configure main monitor
-set $mon_l "DP-0"
-set $wsl1 "1↓"
-set $wsl2 "2↓"
-set $wsl3 "3↓"
-set $wsl4 "4↓"
-workspace $wsl1 output $mon_l
-workspace $wsl2 output $mon_l
-workspace $wsl3 output $mon_l
-workspace $wsl4 output $mon_l
+set $main "DP-0"
+set $pace1 "1"
+set $pace2 "2"
+set $pace3 "3"
+set $pace4 "4"
+set $pace5 "5"
+set $pace6 "6"
+workspace $pace1 output $main
+workspace $pace2 output $main
+workspace $pace3 output $main
+workspace $pace4 output $main
+workspace $pace5 output $main
+workspace $pace6 output $main
 
-# Configure alt monitor
-set $mon_r "DP-4"
-set $wsr1 "1↑"
-set $wsr2 "2↑"
-set $wsr3 "3↑"
-set $wsr4 "4↑"
-workspace $wsr1 output $mon_r
-workspace $wsr2 output $mon_r
-workspace $wsr3 output $mon_r
-workspace $wsr4 output $mon_r
 
 # switch to workspace
-bindsym $mod+1 workspace $wsl1
-bindsym $mod+2 workspace $wsl2
-bindsym $mod+3 workspace $wsl3
-bindsym $mod+4 workspace $wsl4
-bindsym $mod+7 workspace $wsr1
-bindsym $mod+8 workspace $wsr2
-bindsym $mod+9 workspace $wsr3
-bindsym $mod+0 workspace $wsr4
+bindsym $mod+1 workspace $pace1
+bindsym $mod+2 workspace $pace2
+bindsym $mod+3 workspace $pace3
+bindsym $mod+4 workspace $pace4
+bindsym $mod+5 workspace $pace5
+bindsym $mod+6 workspace $pace6
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $wsl1
-bindsym $mod+Shift+2 move container to workspace $wsl2
-bindsym $mod+Shift+3 move container to workspace $wsl3
-bindsym $mod+Shift+4 move container to workspace $wsl4
-bindsym $mod+Shift+7 move container to workspace $wsr1
-bindsym $mod+Shift+8 move container to workspace $wsr2
-bindsym $mod+Shift+9 move container to workspace $wsr3
-bindsym $mod+Shift+0 move container to workspace $wsr4
+bindsym $mod+Shift+1 move container to workspace $pace1
+bindsym $mod+Shift+2 move container to workspace $pace2
+bindsym $mod+Shift+3 move container to workspace $pace3
+bindsym $mod+Shift+4 move container to workspace $pace4
+bindsym $mod+Shift+5 move container to workspace $pace5
+bindsym $mod+Shift+6 move container to workspace $pace6
 
 # i3 management
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'EXIT?' -B 'EXIT!' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "$HOME/.config/rofi/poweroff.sh"
 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode

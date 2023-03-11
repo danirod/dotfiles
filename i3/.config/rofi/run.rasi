@@ -1,0 +1,24 @@
+configuration {
+    icon-theme: "Nordzy";
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
+* {
+    background-color: transparent;
+    text-color: #e5e9f0;
+    font: "Ubuntu Mono 14";
+}
+
+window {
+    background-color: #3b4252;
+    children: [ inputbar ];
+}
+
+prompt {
+    background-color: #5e81ac;
+}
+
+prompt, entry {
+    padding: 16px 24px;
+}

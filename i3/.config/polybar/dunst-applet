@@ -1,4 +1,0 @@
-#!/bin/sh
-
-$HOME/.config/dunst/toggle
-polybar-msg hook dunst 1

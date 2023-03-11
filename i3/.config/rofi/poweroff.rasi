@@ -1,0 +1,80 @@
+configuration {
+    hide-scrollbar: true;
+    fixed-num-lines: false;
+}
+
+* {
+    font-regular: "Ubuntu Mono 24";
+    font-big: "Ubuntu Mono 48";
+
+    default-dark: #4c566a;
+    default-light: #d8dee9;
+    option-background: #5e81ac;
+    option-foreground: #eceff4;
+    option-hover: #88c0d0;
+}
+
+window {
+    width: 800px;
+    y-offset: -100px;
+    enabled: true;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    border-radius: 0px;
+    spacing: 0px;
+    children: ["inputbar", "listview"];    
+    background-color: @default-dark;
+}
+
+inputbar {
+    enabled: true;
+    background-color: @default-light;
+    spacing: 0px;
+    margin: 20px 20px 0px 20px;
+    border-radius: 50px;
+    children: ["entry"];
+}
+
+entry {
+    margin: 20px;
+    padding: 0px 20px;
+    cursor: text;
+    text-color: @default-dark;
+    background-color: transparent;
+    font: @font-regular;
+}
+
+listview {
+    background-color: transparent;
+    columns: 5;
+    lines: 1;
+    margin: 20px;
+    spacing: 20px;
+    fixed-width: true;
+    fixed-height: true;
+    dynamic: true;
+}
+
+element {
+    children: ["element-text"];
+    spacing: 0px;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+}
+
+element-text {
+    background-color: @option-background;
+    text-color: @option-foreground;
+    border-radius: 10px;
+    padding: 35px 30px;
+    border: 0px;
+    font: @font-big;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+element-text.selected {
+    background-color: @option-hover;
+}

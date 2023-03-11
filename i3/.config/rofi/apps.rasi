@@ -1,0 +1,80 @@
+configuration {
+    icon-theme: "Nordzy";
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
+* {
+    darkest-blue: #3b4252;
+    darker-blue: #434c5e;
+    accent-color: #5e81ac;
+    background-color: transparent;
+    text-color: #e5e9f0;
+    font: "Ubuntu Mono 14";
+}
+
+window {
+    background-color: @darkest-blue;
+    padding: 20px;
+    children: [ mode-switcher, inputbar, listview ];
+}
+
+mode-switcher {
+    spacing: 16px;
+}
+
+button {
+    padding: 8px;
+    background-color: @darker-blue;
+}
+
+button selected {
+    background-color: @accent-color;
+}
+
+prompt {
+    enabled: false;
+}
+
+inputbar {
+    margin: 16px 0px;
+    border-radius: 10px;
+    background-color: @accent-color;
+    padding: 16px;
+}
+
+listview {
+    columns: 7;
+    lines: 4;
+    flow: horizontal;
+    fixed-columns: true;
+    background-color: @darker-blue;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+element {
+    orientation: vertical;
+    children: [ element-icon, element-text ];
+    spacing: 5px;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+element selected {
+    background-color: @accent-color;
+}
+
+element-text {
+    background-color: transparent;
+    horizontal-align: 0.5;
+    margin: 0px;
+    padding: 0px;
+}
+
+element-icon {
+    enable: true;
+    size: 96px;
+    margin: 0px;
+    background-color: transparent;
+}
