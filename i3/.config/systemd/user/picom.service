@@ -5,3 +5,6 @@ PartOf=graphical-session.target
 
 [Service]
 ExecStart=/usr/bin/picom
+
+[Install]
+WantedBy=default.target
