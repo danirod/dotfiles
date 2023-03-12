@@ -23,7 +23,7 @@ window {
     border: 0px;
     border-radius: 0px;
     spacing: 0px;
-    children: ["inputbar", "listview"];    
+    children: ["inputbar", "listview"];
     background-color: @default-dark;
 }
 
@@ -48,7 +48,7 @@ entry {
 listview {
     background-color: transparent;
     columns: 1;
-    lines: 2;
+    // lines: 2;
     margin: 20px;
     spacing: 20px;
     fixed-width: true;
