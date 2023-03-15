@@ -90,3 +90,7 @@ function inbox() {
 
 # alias inbox='task add +inbox'
 alias tomorrow="inbox wait:tomorrow"
+
+alias sshnk='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+alias scpnk='scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+alias sftpnk='sftp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
