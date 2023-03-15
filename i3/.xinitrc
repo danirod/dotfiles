@@ -7,9 +7,8 @@ export TERMINAL=alacritty
 xrdb -merge ~/.Xresources
 
 case $HOSTNAME in
-	archstation.local)
+	archstation)
 		xrandr --output DP-4 --primary --below DP-0
-		setxkbmap es
 		;;
 esac
 

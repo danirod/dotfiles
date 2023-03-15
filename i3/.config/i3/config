@@ -124,9 +124,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# extra settings may be overriden per host.
-include ~/.config/i3/`hostnamectl hostname`.conf
-
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nm-applet
