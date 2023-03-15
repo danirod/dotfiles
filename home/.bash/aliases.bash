@@ -35,14 +35,6 @@ alias bee='bundle exec'
 alias bii='bundle install'
 alias boo='bundle outdated'
 
-# vagrant
-alias vup='vagrant up'
-alias vdown='vagrant halt'
-alias vsus='vagrant suspend'
-alias vsh='vagrant ssh'
-alias vrs='vagrant rsync'
-alias vauto='vagrant rsync-auto'
-
 # git
 alias gmaster='git checkout master'
 alias gdevel='git checkout devel'
@@ -63,27 +55,6 @@ alias brew_check="brew bundle check --file=$GLOBAL_BREWFILE"
 alias brew_cleanable="brew bundle cleanup --file=$GLOBAL_BREWFILE"
 # Remove software not declared in Brewfile
 alias brew_clean="brew bundle cleanup --file=$GLOBAL_BREWFILE --force"
-
-# Internet radio
-alias kfma="mpg123 -@ http://playerservices.streamtheworld.com/pls/KFMAFM.pls"
-alias klpx="mpg123 -@ http://playerservices.streamtheworld.com/pls/KLPXFM.pls"
-alias megastar="mpg123 -@ http://megastar.cope.stream.flumotion.com/cope/megastar-low.mp3.m3u"
-alias rockfm="mpg123 -@ http://rockfm.cope.stream.flumotion.com/cope/rockfm-low.mp3.m3u"
-alias cadenaser="mpg123 http://playerservices.streamtheworld.com/api/livestream-redirect/CADENASER.mp3"
-alias 40principales="mpg123 http://playerservices.streamtheworld.com/api/livestream-redirect/Los40.mp3"
-alias los40classic="mpg123 http://playerservices.streamtheworld.com/api/livestream-redirect/M80RADIO.mp3"
-alias triplej="mpg123 -@ http://www.abc.net.au/res/streaming/audio/mp3/triplej.pls"
-
-function inbox() {
-    if [ $# -eq 0 ]; then
-        task inbox
-    else
-        task add +inbox "$@"
-    fi
-}
-
-# alias inbox='task add +inbox'
-alias tomorrow="inbox wait:tomorrow"
 
 alias sshnk='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 alias scpnk='scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
