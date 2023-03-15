@@ -74,12 +74,6 @@ alias 40principales="mpg123 http://playerservices.streamtheworld.com/api/livestr
 alias los40classic="mpg123 http://playerservices.streamtheworld.com/api/livestream-redirect/M80RADIO.mp3"
 alias triplej="mpg123 -@ http://www.abc.net.au/res/streaming/audio/mp3/triplej.pls"
 
-# TaskWarior GTD
-# ==============
-
-# Faster TaskWarrior access (TODO: What about timewarrior?)
-alias t="task"
-
 function inbox() {
     if [ $# -eq 0 ]; then
         task inbox

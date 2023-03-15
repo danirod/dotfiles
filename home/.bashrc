@@ -27,6 +27,4 @@ done
 
 source ~/.bash/bat.bash
 source ~/.bash/fzf.bash
-source ~/.bash/taskwarrior.bash
-bash ~/.bash/applets/task.bash
 
