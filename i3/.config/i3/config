@@ -4,8 +4,7 @@ set $alt Mod1
 font xft:Ubuntu Mono 13
 
 # window positioning
-new_window pixel 0
-new_float pixel 0
+default_border pixel 0
 gaps inner 20
 
 # color theme (load from xresources)
@@ -131,3 +130,4 @@ include ~/.config/i3/`hostnamectl hostname`.conf
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nm-applet
+exec_always --no-startup-id picom
