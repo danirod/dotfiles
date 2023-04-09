@@ -11,9 +11,9 @@ case "$chosen" in
         i3-msg "gaps right current toggle 400"
         ;;
     $SCROT)
-        scrot "$HOME/images/screenshots/%Y%m%d-%H%M%S.png" -e 'feh $f'
+        scrot "$HOME/images/screenshots/%Y%m%d-%H%M%S.png" -e '~/.config/rofi/screenshot.sh $f'
         ;;
     $SCROT_REGION)
-        scrot -s "$HOME/images/screenshots/%Y%m%d-%H%M%S.png" -e 'feh $f'
+        scrot -s "$HOME/images/screenshots/%Y%m%d-%H%M%S.png" -e '~/.config/rofi/screenshot.sh $f'
         ;;
 esac
