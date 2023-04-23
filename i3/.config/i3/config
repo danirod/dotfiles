@@ -127,4 +127,3 @@ bindsym $mod+r mode "resize"
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nm-applet
-exec_always --no-startup-id picom
