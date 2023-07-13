@@ -4,8 +4,8 @@ set $alt Mod1
 font xft:Ubuntu Mono 13
 
 # window positioning
-default_border pixel 0
-gaps inner 20
+default_border normal 2
+gaps inner 0
 
 # color theme (load from xresources)
 set_from_resource $foreground       foreground #000000
@@ -27,10 +27,10 @@ set_from_resource $leafgreen        color14 #000000
 set_from_resource $darkwhite        color7  #000000
 set_from_resource $white            color15 #000000
 
-client.focused $green $green $foreground $green
-client.unfocused $background $background $white $background
-client.focused_inactive $background $background $foreground $background
-client.urgent $red $red $red $red
+client.focused $blue $blue $background $blue $blue
+client.unfocused $darkblack $darkblack $white $darkblack $darkblack
+client.focused_inactive $darkblack $darkblack $white $darkblack $darkblack
+client.urgent $red $red $white $red $red
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

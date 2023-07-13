@@ -8,7 +8,7 @@ xrdb -merge ~/.Xresources
 
 case $HOSTNAME in
 	archstation)
-		xrandr --output DP-4 --primary --below DP-0
+		xrandr --output DP-0 --primary --left-of DP-4
 		;;
 esac
 
