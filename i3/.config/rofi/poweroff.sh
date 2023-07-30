@@ -42,6 +42,7 @@ main() {
             i3lock-fancy-multimonitor -n -p
             ;;
         $LOCK)
+            xset dpms force off
             i3lock-fancy-multimonitor -n -p
             ;;
         $LOGOUT)
