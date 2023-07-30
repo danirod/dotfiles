@@ -7,4 +7,8 @@ font:
   normal:
     family: Ubuntu Mono
     style: Regular
-  size: 13.0
+  size: 24.0
+key_bindings:
+  - { key: Return, mods: Control, action: SpawnNewInstance }
+commands:
+  - { name: SpawnNewInstance, command: alacrity & disown }
