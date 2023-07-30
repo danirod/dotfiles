@@ -1,19 +1,22 @@
 #!/bin/sh
 
-COUNT=3
-MARGIN="margin"
-SCROT="scrot"
-SCROT_REGION="scrot-region"
-options="$MARGIN\n$SCROT\n$SCROT_REGION"
-chosen=$(echo -en "$options" | rofi -dmenu -i -theme ~/.config/rofi/confirm.rasi -theme-str "listview { lines: $COUNT; }" -hover-select -me-select-entry '' -me-accept-entry MousePrimary)
+function menu() {
+    for arg in "$@"; do echo $arg; done | rofi -dmenu -i -theme ~/.config/rofi/confirm.rasi -theme-str "listview { lines: $#; }" -hover-select -me-select-entry '' -me-accept-entry MousePrimary
+}
+
+chosen=$(menu margin scrot scrot-region screenlayout)
 case "$chosen" in
-    $MARGIN)
+    margin)
         i3-msg "gaps right current toggle 400"
         ;;
-    $SCROT)
+    scrot)
         scrot "$HOME/images/screenshots/%Y%m%d-%H%M%S.png" -e '~/.config/rofi/screenshot.sh $f'
         ;;
-    $SCROT_REGION)
+    scrot-region)
+        sleep 1
         scrot -s "$HOME/images/screenshots/%Y%m%d-%H%M%S.png" -e '~/.config/rofi/screenshot.sh $f'
         ;;
+    screenlayout)
+        chosen=$(menu $(ls $HOME/.screenlayout))
+        bash $HOME/.screenlayout/$chosen
 esac
