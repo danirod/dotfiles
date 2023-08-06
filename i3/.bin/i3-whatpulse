@@ -1,0 +1,6 @@
+#!/bin/sh
+# A wrapper that prevents calling whatpulse if it is already running.
+# Calling `whatpulse` when is already running causes it to open the main window
+# even when using the --closedwindow parameter (at least in version 5.4)
+
+pgrep -lx whatpulse || whatpulse --delaystartup 5
