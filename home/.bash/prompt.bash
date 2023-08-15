@@ -18,8 +18,13 @@ if [[ $(LC_ALL=C type -t __git_ps1 2>/dev/null) == "function" ]]; then
     GIT_PS1_SHOWUPSTREAM="verbose"
     export GIT_PS1_SHOWDIRTYSTATE GIT_PS1_SHOWSTASHSTATE
     export GIT_PS1_SHOWUNTRACKEDFILES GIT_PS1_SHOWUPSTREAM
-    export PS1="\`__prompt__exitcode\`\[\e[2m\]\h\[\e[22m\] \w\[\e[1;33m\]\$(__git_ps1)\[\e[0m\] \$ "
+    export PS1="\`__prompt__exitcode\`\[\e[2m\]\h\[\e[22m\] \W\[\e[1;33m\]\$(__git_ps1)\[\e[0m\] \$ "
 else
-    export PS1="\`__prompt__exitcode\`\[\e[2m\]\h\[\e[22m\] \w\[\e[0m\] \$ "
+    export PS1="\`__prompt__exitcode\`\[\e[2m\]\h\[\e[22m\] \W\[\e[0m\] \$ "
 fi
 
+function __my_prompt_command() {
+    printf "\033]0;%s %s\007" "${HOSTNAME%%.*}" "$(basename $PWD)"
+}
+
+export PROMPT_COMMAND="__my_prompt_command"
