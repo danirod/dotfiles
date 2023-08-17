@@ -19,6 +19,7 @@
 
 [diff]
 	tool = vimdiff
+	submodule = log
 
 [diff "rails_enc"]
 	textconv = rails encrypted:show
