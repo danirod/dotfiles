@@ -2,10 +2,11 @@
 	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [alias]
-	lod = log --oneline --decorate --color # my traditional singleline log alias
-	staged = diff --staged                 # show patch that will be committed
-	stash-layer = stash -k -u              # stash things not going to be committed
-	base = merge-base --fork-point         # commit from which a branch was created
+	base = merge-base --fork-point                           # commit from which a branch was created
+	gone = ! git branch -vv | grep gone | awk '{ print $1 }' # branches deleted from the remote
+	lod = log --oneline --decorate --color                   # my traditional singleline log alias
+	staged = diff --staged                                   # show patch that will be committed
+	stash-layer = stash -k -u                                # stash things not going to be committed
 
 [user]
 	email = dani@danirod.es
