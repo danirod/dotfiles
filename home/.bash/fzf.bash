@@ -3,4 +3,5 @@ function git_pick_hash {
 	git log --pretty=oneline --abbrev-commit --reverse | fzf --tac | cut -d' ' -f1
 }
 
+export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix"
 export FZF_DEFAULT_OPTS="--color=16,border:white --preview-window='right,border-none,<50(up,50%,border-bottom)'"
