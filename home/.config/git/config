@@ -2,9 +2,6 @@
 	email = dani@danirod.es
 	name = Dani Rodríguez
 
-[include]
-    path=~/.gitconfig.local
-
 [alias]
     cp = cherry-pick
     lod = log --oneline --decorate --color
