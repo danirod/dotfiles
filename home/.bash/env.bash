@@ -15,6 +15,12 @@ elif [ -x $(command -v dillo) ]; then
     export BROWSER=dillo  # dillo
 fi
 
+# ls colors
+if [ `uname` == "Darwin" ]; then
+    export CLICOLOR=1
+    export LSCOLORS=GxFxCxDxBxegedabagaced
+fi
+
 # Git: diff-highlighter
 if [ -x /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ]; then
 	export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
