@@ -1,73 +1,26 @@
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[alias]
+	lod = log --oneline --decorate --color # my traditional singleline log alias
+	staged = diff --staged                 # show patch that will be committed
+	stash-layer = stash -k -u              # stash things not going to be committed
+	base = merge-base --fork-point         # commit from which a branch was created
+
 [user]
 	email = dani@danirod.es
 	name = Dani Rodríguez
 
-[alias]
-    cp = cherry-pick
-    lod = log --oneline --decorate --color
-    co = checkout
-    ci = commit
-    ap = add -p
-    am = commit --amend
-    unadd = reset HEAD --
-    staged = diff --staged
-    stash-layer = stash -k -u # hides everything not added for a commit
-	mb = merge-base --fork-point
-	addcw = -c interactive.diffFilter=\"git diff --color-words\" add -p
-
-[color]
-    branch = auto
-    diff = auto
-    status = auto
-
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-
-[color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-
-[color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
-
-[mergetool "vimdiff"]
-    cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
-
-[merge]
-	tool = vimdiff
-	conflictstyle = diff3
-
-[mergetool]
-	prompt = false
-
-[diff]
-    tool = vimdiff
-
-[difftool]
-    prompt = false
 [init]
 	defaultBranch = trunk
+
 [interactive]
 	diffFilter = diff-so-fancy --patch
 
-[pager]
-    diff = diff-so-fancy | less --tabs=4 -RFX
-    log = diff-so-fancy | less --tabs=4 -RFX
-    show = diff-so-fancy | less --tabs=4 -RFX
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+[diff]
+	tool = vimdiff
 
 [diff "rails_enc"]
-  textconv = rails encrypted:show
-  cachetextconv = false
-[core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	textconv = rails encrypted:show
+	cachetextconv = false
+
