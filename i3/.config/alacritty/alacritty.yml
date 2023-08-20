@@ -1,14 +1,14 @@
 import:
-  - ~/.config/alacritty/nord.yml
+  - ~/.config/alacritty/xterm.yml
 
 env:
-  TERM: xterm-256color
+  TERM: xterm
 font:
   normal:
-    family: Ubuntu Mono
+    family: Terminus
     style: Regular
-  size: 24.0
+  size: 23.0
 key_bindings:
   - { key: Return, mods: Control, action: SpawnNewInstance }
 commands:
-  - { name: SpawnNewInstance, command: alacrity & disown }
+  - { name: SpawnNewInstance, command: alacritty & disown }

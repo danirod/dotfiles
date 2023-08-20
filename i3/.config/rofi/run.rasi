@@ -7,18 +7,30 @@ configuration {
 * {
     background-color: transparent;
     text-color: #e5e9f0;
-    font: "Ubuntu Mono 14";
+    font: "Terminus 14";
 }
 
 window {
-    background-color: #3b4252;
+    background-color: transparent;
     children: [ inputbar ];
 }
 
+inputbar {
+    spacing: 0px;
+}
+
 prompt {
-    background-color: #5e81ac;
+    background-color: #0000aa;
+    border: 1px 0px 1px 1px;
+    border-color: #5555ff;
 }
 
 prompt, entry {
     padding: 16px 24px;
+}
+
+entry {
+    background-color: #555555;
+    border: 1px 1px 1px 0px;
+    border-color: #aaaaaa;
 }

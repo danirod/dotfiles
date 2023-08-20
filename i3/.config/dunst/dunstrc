@@ -5,18 +5,19 @@
     follow = none
     transparency = 0
 
-    width = 600
+    width = 400
     height = 240
-    origin = top-right
-    offset = 20x65
+    origin = bottom-right
+    offset = -1x25
     padding = 8
     horizontal_padding = 8
     text_icon_padding = 8
-    gap_size = 8
+    gap_size = -1
+    frame_color = "#555555"
 
-    frame_width = 0
+    frame_width = 1
 
-    font = Ubuntu Mono 12
+    font = Terminus 12
     markup = full
     format = "<b>%s</b>\n%b"
     alignment = left
@@ -44,14 +45,14 @@
     mouse_right_click = context
 
 [urgency_low]
-    background = "#2e3440"
-    foreground = "#eceff4"
+    background = "#000000"
+    foreground = "#aaaaaa"
     timeout = 10
 [urgency_normal]
-    background = "#434c5e"
-    foreground = "#eceff4"
+    background = "#000000"
+    foreground = "#aaaaaa"
     timeout = 10
 [urgency_critical]
-    background = "#bf616a"
-    foreground = "#eceff4"
+    background = "#aa0000"
+    foreground = "#ffffff"
     timeout = 0

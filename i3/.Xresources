@@ -1,5 +1,5 @@
 ! Colorscheme
-#include ".xresources.d/nord.xresources"
+#include ".xresources.d/vga.xresources"
 
 Xft.dpi: 96
 

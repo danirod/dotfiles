@@ -1,7 +1,7 @@
 set $mod Mod4
 set $alt Mod1
 
-font xft:Ubuntu Mono 13
+font xft:Terminus Bold 14
 
 # window positioning
 default_border normal 1
@@ -37,7 +37,7 @@ set_from_resource $leafgreen        color14 #000000
 set_from_resource $darkwhite        color7  #000000
 set_from_resource $white            color15 #000000
 
-client.focused $blue $blue $background $blue $blue
+client.focused $darkblue $darkblue $white $darkblue $darkblue
 client.unfocused $black $black $white $black $black
 client.focused_inactive $black $black $white $black $black
 client.urgent $red $red $white $red $red

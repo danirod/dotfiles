@@ -1,35 +1,39 @@
 configuration {
-    icon-theme: "Nordzy";
+    icon-theme: "Papirus";
     show-icons: true;
     drun-display-format: "{name}";
 }
 
 * {
-    darkest-blue: #3b4252;
-    darker-blue: #434c5e;
-    accent-color: #5e81ac;
+    window-background: #000000;
+    window-foreground: #ffffff;
+    switcher-background: #555555;
+    switcher-foreground: #ffffff;
+    accent-color: #0000aa;
+
     background-color: transparent;
-    text-color: #e5e9f0;
-    font: "Ubuntu Mono 14";
+    text-color: #ffffff;
+    font: "Terminus 12";
+    spacing: 0;
 }
 
 window {
-    background-color: @darkest-blue;
-    padding: 20px;
+    background-color: @window-foreground;
+    border: 1px;
+    border-color: @window-border;
     children: [ mode-switcher, inputbar, listview ];
-}
-
-mode-switcher {
-    spacing: 16px;
 }
 
 button {
     padding: 8px;
-    background-color: @darker-blue;
+    margin: 0px;
+    background-color: @window-background;
+    color: @window-foreground;
 }
 
 button selected {
     background-color: @accent-color;
+    font: "Terminus Bold 12";
 }
 
 prompt {
@@ -37,28 +41,27 @@ prompt {
 }
 
 inputbar {
-    margin: 16px 0px;
-    border-radius: 10px;
+    margin: 0px;
     background-color: @accent-color;
+    border: 0px 0px 1px 0px;
+    border-color: @window-foreground;
+    color: @window-foreground;
     padding: 16px;
 }
 
 listview {
     columns: 7;
-    lines: 4;
+    lines: 7;
     flow: horizontal;
     fixed-columns: true;
-    background-color: @darker-blue;
-    border-radius: 10px;
-    padding: 16px;
+    background-color: @window-background;
 }
 
 element {
     orientation: vertical;
     children: [ element-icon, element-text ];
     spacing: 5px;
-    padding: 16px;
-    border-radius: 10px;
+    padding: 8px;
 }
 
 element selected {
@@ -70,11 +73,12 @@ element-text {
     horizontal-align: 0.5;
     margin: 0px;
     padding: 0px;
+    color: @drawer-foreground;
 }
 
 element-icon {
     enable: true;
-    size: 96px;
+    size: 64px;
     margin: 0px;
     background-color: transparent;
 }

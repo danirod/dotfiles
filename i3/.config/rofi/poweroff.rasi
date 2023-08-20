@@ -1,46 +1,40 @@
-configuration {
+onfiguration {
     hide-scrollbar: true;
     fixed-num-lines: false;
 }
 
 * {
-    font-regular: "Ubuntu Mono 24";
-    font-big: "Ubuntu Mono 48";
+    font-regular: "Terminus 24";
+    font-big: "Terminus 48";
 
-    default-dark: #4c566a;
-    default-light: #d8dee9;
-    option-background: #5e81ac;
-    option-foreground: #eceff4;
-    option-hover: #88c0d0;
+    window-dark: #000000;
+    window-light: #ffffff;
+    accent: #aa0000;
+
+    spacing: 0px;
 }
 
 window {
     width: 800px;
     y-offset: -100px;
     enabled: true;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    border-radius: 0px;
-    spacing: 0px;
-    children: ["inputbar", "listview"];    
-    background-color: @default-dark;
+    border: 1px;
+    border-color: @window-light;
+    children: ["inputbar", "listview"];
+    background-color: @window-dark;
 }
 
 inputbar {
     enabled: true;
-    background-color: @default-light;
-    spacing: 0px;
-    margin: 20px 20px 0px 20px;
-    border-radius: 50px;
+    background-color: @window-dark;
     children: ["entry"];
 }
 
 entry {
-    margin: 20px;
-    padding: 0px 20px;
+    margin: 10px;
+    padding: 0px 10px;
     cursor: text;
-    text-color: @default-dark;
+    text-color: @window-light;
     background-color: transparent;
     font: @font-regular;
 }
@@ -49,8 +43,6 @@ listview {
     background-color: transparent;
     columns: 5;
     lines: 1;
-    margin: 20px;
-    spacing: 20px;
     fixed-width: true;
     fixed-height: true;
     dynamic: true;
@@ -58,16 +50,16 @@ listview {
 
 element {
     children: ["element-text"];
-    spacing: 0px;
     background-color: transparent;
     width: 100px;
     height: 100px;
+    spacing: 0;
+    margin: 0;
 }
 
 element-text {
-    background-color: @option-background;
-    text-color: @option-foreground;
-    border-radius: 10px;
+    background-color: @window-dark;
+    text-color: @window-light;
     padding: 35px 30px;
     border: 0px;
     font: @font-big;
@@ -76,5 +68,5 @@ element-text {
 }
 
 element-text.selected {
-    background-color: @option-hover;
+    background-color: @accent;
 }

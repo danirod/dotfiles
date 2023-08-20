@@ -19,7 +19,7 @@ export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 if [ -f .dotfiles/wallpaper ]; then
 	hsetroot -extend .dotfiles/wallpaper
 else
-	hsetroot -solid '#161b22'
+	hsetroot -solid '#000000'
 fi
 
 source $HOME/.bash_profile

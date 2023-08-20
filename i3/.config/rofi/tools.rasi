@@ -21,8 +21,23 @@ window {
     border: 1px;
     border-color: @window-light;
     spacing: 0px;
-    children: ["listview"];
+    children: ["inputbar", "listview"];
     background-color: @window-dark;
+}
+
+inputbar {
+    enabled: true;
+    background-color: @window-dark;
+    children: ["entry"];
+}
+
+entry {
+    margin: 10px;
+    padding: 0px 10px;
+    cursor: text;
+    text-color: @window-light;
+    background-color: transparent;
+    font: @font-regular;
 }
 
 listview {
