@@ -2,6 +2,10 @@ configuration {
     icon-theme: "Papirus";
     show-icons: true;
     drun-display-format: "{name}";
+
+    drun {
+        fallback-icon: "application-x-addon";
+    }
 }
 
 * {
@@ -51,7 +55,7 @@ inputbar {
 
 listview {
     columns: 7;
-    lines: 7;
+    lines: 5;
     flow: horizontal;
     fixed-columns: true;
     background-color: @window-background;
