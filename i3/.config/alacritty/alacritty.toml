@@ -1,0 +1,16 @@
+import = ["/home/danirod/.config/alacritty/xterm.toml"]
+
+[env]
+TERM = "xterm"
+
+[font]
+size = 23.0
+
+[font.normal]
+family = "Terminus"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Control"
