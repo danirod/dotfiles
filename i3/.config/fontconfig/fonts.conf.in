@@ -1,0 +1,55 @@
+define(SMOLALIAS, esyscmd(./smolalias.sh))dnl
+<?xml version="1.0" ?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<!--
+fonts.conf IS A GENERATED FILE. PLEASE DO NOT EDIT DIRECTLY.
+UPDATE fonts.conf.in AND RUN m4 fonts.conf.in > fonts.conf
+-->
+<fontconfig>
+  <!-- Fuck Noto, all my homies prefer DejaVu -->
+  <alias>
+    <family>serif</family>
+    <prefer>
+      <family>DejaVu Serif</family>
+    </prefer>
+  </alias>
+  <alias>
+    <family>sans-serif</family>
+    <prefer>
+      <family>DejaVu Sans</family>
+    </prefer>
+  </alias>
+  <alias>
+    <family>monospace</family>
+    <prefer>
+      <family>DejaVu Sans Mono</family>
+    </prefer>
+  </alias>
+
+  <!-- Retro font rendering style prefers crispy fonts -->
+  <!-- Note: this works better when interpreter-version is 35 -->
+  <match target="font">
+    <edit mode="assign" name="rgba">
+      <const>rgb</const>
+    </edit>
+    <edit mode="assign" name="hinting">
+      <bool>true</bool>
+    </edit>
+    <edit mode="assign" name="autohint">
+      <bool>false</bool>
+    </edit>
+    <edit mode="assign" name="antialias">
+      <bool>true</bool>
+    </edit>
+    <edit mode="assign" name="hintstyle">
+      <const>hintfull</const>
+    </edit>
+    <edit mode="assign" name="lcdfilter">
+      <const>lcddefault</const>
+    </edit>
+  </match>
+
+  <!-- Fonts that actually look better without antialias when small -->
+  SMOLALIAS
+</fontconfig>
+<!-- vim: set ft=xml: -->
