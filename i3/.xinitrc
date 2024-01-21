@@ -7,7 +7,7 @@ export TERMINAL=alacritty
 xrdb -merge ~/.Xresources
 
 case $HOSTNAME in
-	archstation)
+	archstation.local)
 		xrandr --output DP-4 --primary --left-of DP-0
 		;;
 esac
