@@ -5,7 +5,7 @@ onfiguration {
 
 * {
     font-regular: "Terminus 24";
-    font-big: "Terminus 48";
+    font-big: "Terminus 64";
 
     window-dark: #000000;
     window-light: #ffffff;
@@ -60,7 +60,7 @@ element {
 element-text {
     background-color: @window-dark;
     text-color: @window-light;
-    padding: 35px 30px;
+    padding: 20px 20px;
     border: 0px;
     font: @font-big;
     horizontal-align: 0.5;
