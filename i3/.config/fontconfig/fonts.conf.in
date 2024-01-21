@@ -68,11 +68,12 @@ UPDATE fonts.conf.in AND RUN m4 fonts.conf.in > fonts.conf
     </edit>
   </match>
 
-  <!-- If ttf-ms-win11 is installed, these fonts cause conflict with icomoon-feather -->
+  <!-- Ban some of the fonts that installs ttf-ms-win11 -->
   <selectfont>
     <rejectfont>
-      <glob>/usr/share/fonts/TTF/segmdl2.ttf</glob>
-      <glob>/usr/share/fonts/TTF/SegoeIcons.ttf</glob>
+      <glob>/usr/share/fonts/TTF/seg*.ttf</glob>
+      <glob>/usr/share/fonts/TTF/Seg*.ttf</glob>
+      <glob>/usr/share/fonts/TTF/consola*.ttf</glob>
     </rejectfont>
   </selectfont>
 </fontconfig>
