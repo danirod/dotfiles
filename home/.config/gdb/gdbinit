@@ -1,3 +1,5 @@
+set debuginfod enabled off
+
 define exit
   set confirm off
   quit
