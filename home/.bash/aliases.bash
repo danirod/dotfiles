@@ -30,3 +30,22 @@ alias brew_clean="brew bundle cleanup --file=$GLOBAL_BREWFILE --force"
 alias ssh!='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 alias scp!='scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 alias sftp!='sftp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+
+if [ `uname` == "Darwin" ]; then
+    alias rdm='/Applications/RDM.app/Contents/MacOS/RDM'
+
+    function res_rec() {
+        /Applications/RDM.app/Contents/MacOS/RDM -w 1920 -h 1080 -d 0
+        /Applications/RDM.app/Contents/MacOS/RDM -w 1920 -h 1080 -d 1
+    }
+
+    function res_wrec() {
+        /Applications/RDM.app/Contents/MacOS/RDM -w 2048 -h 1080 -d 0
+        /Applications/RDM.app/Contents/MacOS/RDM -w 2048 -h 1080 -d 1
+    }
+
+    function res_normal() {
+        /Applications/RDM.app/Contents/MacOS/RDM -w 2560 -h 1440 -d 0
+        /Applications/RDM.app/Contents/MacOS/RDM -w 2560 -h 1440 -d 1
+    }
+fi

@@ -39,3 +39,10 @@ command -v goenv >/dev/null && eval "$(goenv init -)"
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/config
 
 export HTTPIE_CONFIG_DIR=~/.config/httpie/
+
+# Homebrew
+if [ `uname` == "Darwin" ]; then
+    export HOMEBREW_NO_ANALYTICS=1
+    export HOMEBREW_NO_INSTALL_CLEANUP=1
+    export HOMEBREW_NO_INSTALL_FROM_API=1
+fi
