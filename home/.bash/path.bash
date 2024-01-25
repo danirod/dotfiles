@@ -18,3 +18,9 @@
 
 # Golang bin directory
 [ -d $HOME/go/bin ] && PATH="$PATH:$HOME/go/bin"
+
+# Android Home
+if [ -d $HOME/Library/Android/sdk ]; then
+	export ANDROID_HOME=$HOME/Library/Android/sdk
+	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/34.0.0
+fi
