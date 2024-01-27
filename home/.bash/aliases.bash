@@ -12,8 +12,8 @@ if [ `uname` == "Darwin" ]; then
     alias planet='lsof -iTCP -sTCP:LISTEN -nP'
     alias suplanet='sudo lsof -iTCP -sTCP:LISTEN -nP'
 else
-    alias planet='netstat -plnt'
-    alias suplanet='sudo netstat -plnt'
+    alias planet='ss -ltp'
+    alias suplanet='sudo ss -ltp'
 fi
 
 # Homebrew for macOS
