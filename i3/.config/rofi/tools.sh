@@ -10,11 +10,11 @@ case "$chosen" in
         i3-msg "gaps right current toggle 400"
         ;;
     scrot)
-        scrot "$HOME/images/screenshots/%Y%m%d-%H%M%S.png" -e '~/.config/rofi/screenshot.sh $f'
+        $HOME/.bin/screenshot
         ;;
     scrot-region)
         sleep 1
-        scrot -s "$HOME/images/screenshots/%Y%m%d-%H%M%S.png" -e '~/.config/rofi/screenshot.sh $f'
+        $HOME/.bin/screenshot -r
         ;;
     screenlayout)
         chosen=$(menu $(ls $HOME/.screenlayout))

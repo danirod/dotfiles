@@ -1,0 +1,64 @@
+#!/bin/bash
+
+set -e
+
+# A script to take screenshots.
+
+while (($#)) ; do
+	case "$1" in
+		-h|--help)
+			echo "Usage: $0 [-r|--region] [--noclip] [--nofeh]"
+			echo "  -r --region : only capture a region"
+			echo "  --noclip : do not copy to clipboard"
+			echo "  --nofeh : do not open feh"
+			exit 0
+			;;
+		-r|--region)
+			if [ -n "$mode" ]; then
+				echo "You already configured the mode"
+				exit 1
+			fi
+			mode=region
+			;;
+		--noclip)
+			if [ -n "$noclipboard" ]; then
+				echo "Repeating --noclip won't make it stronger"
+				exit 1
+			fi
+			noclipboard=1
+			;;
+		--nofeh)
+			if [ -n "$nofeh" ]; then
+				echo "Repeating --nofeh won't make it stronger"
+				exit 1
+			fi
+			nofeh=1
+			;;
+	esac
+	shift
+done
+
+if [ -z "$mode" ]; then
+	mode=monitor
+fi
+
+mkdir -p $HOME/images/screenshots
+path="$HOME/images/screenshots/%Y%m%d-%H%M%S.png"
+
+case "$mode" in
+	monitor)
+		file=$(scrot "$path" -e 'echo $f')
+		;;
+	region)
+		file=$(scrot -b -s "$path" -e 'echo $f')
+		;;
+esac
+
+if [ -n "$file" ]; then
+	if [ -z "$noclipboard" ]; then
+		xclip -selection clipboard -t image/png "$file"
+	fi
+	if [ -z "$nofeh" ]; then
+		feh "$file"
+	fi
+fi

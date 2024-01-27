@@ -11,6 +11,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+r restart
 bindsym $mod+f fullscreen
 bindsym $mod+Shift+q kill
+bindsym --release Print exec "$HOME/.bin/screenshot -r"
 
 # includes
 include ~/.config/i3/theme
