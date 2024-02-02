@@ -6,10 +6,10 @@ configuration {
 * {
     window-dark: #000000;
     window-light: #ffffff;
-    accent: #aa0000;
+    accent: #1793d0;
 
     spacing: 0px;
-    font: "Terminus 24";
+    font: "sans 14";
 }
 
 window {
@@ -48,17 +48,10 @@ listview {
     dynamic: true;
 }
 
-element {
-    children: ["element-text"];
-    spacing: 0px;
-    width: 100px;
-    height: 100px;
-}
-
 element-text {
     background-color: @window-dark;
     text-color: @window-light;
-    padding: 35px 30px;
+    padding: 15px 30px;
     border: 0px;
     horizontal-align: 0.5;
     vertical-align: 0.5;

@@ -6,10 +6,10 @@ configuration {
 * {
     window-dark: #000000;
     window-light: #ffffff;
-    accent: #aa0000;
+    accent: #1793d0;
 
     spacing: 0px;
-    font: "Terminus 24";
+    font: "monospace 24";
 }
 
 window {

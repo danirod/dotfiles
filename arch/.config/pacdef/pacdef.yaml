@@ -1,0 +1,4 @@
+---
+
+aur_helper: yay
+disabled_backends: [python, flatpak]

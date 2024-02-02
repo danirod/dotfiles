@@ -4,18 +4,17 @@ onfiguration {
 }
 
 * {
-    font-regular: "Terminus 24";
-    font-big: "Terminus 64";
+    font-regular: "sans 16";
+    font-big: "sans 64";
 
     window-dark: #000000;
     window-light: #ffffff;
-    accent: #aa0000;
+    accent: #1793d0;
 
     spacing: 0px;
 }
 
 window {
-    width: 800px;
     y-offset: -100px;
     enabled: true;
     border: 1px;
@@ -43,7 +42,7 @@ listview {
     background-color: transparent;
     columns: 5;
     lines: 1;
-    fixed-width: true;
+    fixed-width: false;
     fixed-height: true;
     dynamic: true;
 }

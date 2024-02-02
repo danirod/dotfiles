@@ -1,0 +1,19 @@
+# You are going to be deeply dissapointed by my boring taste
+
+# window positioning
+default_border normal 1
+hide_edge_borders both
+title_align center
+gaps inner 0
+smart_borders on
+
+# window aspect
+set $focused #1393d0
+set $unfocused #555555
+set $urgent #aa0000
+set $foreground #ffffff
+font xft:DejaVu Sans Bold 10
+client.focused $focused $focused $foreground $focused $focused
+client.unfocused $unfocused $unfocused $foreground $unfocused $unfocused
+client.focused_inactive $unfocused $unfocused $foreground $unfocused $unfocused
+client.urgent $urgent $urgent $foreground $urgent $urgent

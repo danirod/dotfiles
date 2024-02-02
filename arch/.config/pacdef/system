@@ -1,0 +1,15 @@
+[arch]
+base
+base-devel
+gnome-keyring
+linux-firmware
+linux-lts
+linux-lts-headers
+ly
+man-db
+man-pages
+openssh
+pacdef
+polkit
+udisks2
+yay-bin

@@ -1,0 +1,6 @@
+# Autostart of some programs when i3 starts
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id unclutter
+exec $HOME/.bin/i3-whatpulse
+exec udiskie -s

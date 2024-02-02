@@ -1,7 +1,7 @@
 #!/bin/sh
 
 function menu() {
-    for arg in "$@"; do echo $arg; done | rofi -dmenu -i -theme ~/.config/rofi/tools.rasi -theme-str "listview { lines: $#; }" -hover-select -me-select-entry '' -me-accept-entry MousePrimary
+    for arg in "$@"; do echo $arg; done | rofi -dpi 1 -dmenu -i -theme ~/.config/rofi/tools.rasi -theme-str "listview { lines: $#; }" -hover-select -me-select-entry '' -me-accept-entry MousePrimary
 }
 
 chosen=$(menu margin scrot scrot-region screenlayout)

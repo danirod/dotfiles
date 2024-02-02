@@ -1,0 +1,8 @@
+# rofi actions
+
+bindsym $mod+Shift+e exec "$HOME/.config/rofi/poweroff.sh"
+bindsym $mod+space exec $HOME/.config/rofi/apps.sh
+bindsym $mod+$alt+space exec $HOME/.config/rofi/apps.sh --window
+bindsym $mod+Shift+d exec $HOME/.config/rofi/run.sh
+bindsym $mod+Shift+s exec $HOME/.config/rofi/tools.sh
+

@@ -4,10 +4,10 @@ import = ["/home/danirod/.config/alacritty/xterm.toml"]
 TERM = "xterm"
 
 [font]
-size = 23.0
+size = 10.5
 
 [font.normal]
-family = "Terminus"
+family = "DejaVuSansM Nerd Font"
 style = "Regular"
 
 [[keyboard.bindings]]

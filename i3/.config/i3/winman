@@ -1,0 +1,77 @@
+# Window management
+
+# layout binding
+floating_modifier $mod
+bindsym $mod+v split toggle
+bindsym $mod+a focus parent
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+ntilde move right
+
+# workspaces
+set $pace1 "1"
+set $pace2 "2"
+set $pace3 "3"
+set $pace4 "4"
+set $pace5 "5"
+set $pace6 "6"
+set $pace7 "7"
+set $pace8 "8"
+
+# workspace assignment
+workspace $pace1 output primary
+workspace $pace2 output primary
+workspace $pace3 output primary
+workspace $pace4 output primary
+workspace $pace5 output secondary
+workspace $pace6 output secondary
+workspace $pace7 output secondary
+workspace $pace8 output secondary
+
+# switch to workspace
+bindsym $mod+1 workspace $pace1
+bindsym $mod+2 workspace $pace2
+bindsym $mod+3 workspace $pace3
+bindsym $mod+4 workspace $pace4
+bindsym $mod+5 workspace $pace5
+bindsym $mod+6 workspace $pace6
+bindsym $mod+7 workspace $pace7
+bindsym $mod+8 workspace $pace8
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $pace1
+bindsym $mod+Shift+2 move container to workspace $pace2
+bindsym $mod+Shift+3 move container to workspace $pace3
+bindsym $mod+Shift+4 move container to workspace $pace4
+bindsym $mod+Shift+5 move container to workspace $pace5
+bindsym $mod+Shift+6 move container to workspace $pace6
+bindsym $mod+Shift+7 move container to workspace $pace7
+bindsym $mod+Shift+8 move container to workspace $pace8
+
+
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym ntilde resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"

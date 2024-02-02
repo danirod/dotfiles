@@ -1,17 +1,10 @@
-configuration {
-    icon-theme: "Nordzy";
-    show-icons: true;
-    drun-display-format: "{name}";
-}
-
 * {
     background-color: transparent;
     text-color: #e5e9f0;
-    font: "Terminus 14";
+    font: "monospace 12";
 }
 
 window {
-    background-color: transparent;
     children: [ inputbar ];
 }
 
@@ -20,17 +13,13 @@ inputbar {
 }
 
 prompt {
-    background-color: #0000aa;
-    border: 1px 0px 1px 1px;
-    border-color: #5555ff;
+    background-color: #1793d0;
 }
 
 prompt, entry {
-    padding: 16px 24px;
+    padding: 12px 24px;
 }
 
 entry {
-    background-color: #555555;
-    border: 1px 1px 1px 0px;
-    border-color: #aaaaaa;
+    background-color: #333333;
 }

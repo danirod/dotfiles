@@ -13,11 +13,11 @@ configuration {
     window-foreground: #ffffff;
     switcher-background: #555555;
     switcher-foreground: #ffffff;
-    accent-color: #0000aa;
+    accent-color: #1793d0;
 
     background-color: transparent;
     text-color: #ffffff;
-    font: "Terminus 12";
+    font: "Sans 10";
     spacing: 0;
 }
 
@@ -37,7 +37,7 @@ button {
 
 button selected {
     background-color: @accent-color;
-    font: "Terminus Bold 12";
+    font: "Sans Bold 10";
 }
 
 prompt {
@@ -53,16 +53,20 @@ inputbar {
     padding: 16px;
 }
 
+entry {
+    font: "Sans 16";
+}
+
 listview {
-    columns: 7;
-    lines: 5;
+    columns: 2;
+    lines: 10;
     flow: horizontal;
-    fixed-columns: true;
+    /* fixed-columns: true; */
     background-color: @window-background;
 }
 
 element {
-    orientation: vertical;
+    orientation: horizontal;
     children: [ element-icon, element-text ];
     spacing: 5px;
     padding: 8px;
@@ -74,7 +78,7 @@ element selected {
 
 element-text {
     background-color: transparent;
-    horizontal-align: 0.5;
+    vertical-align: 0.5;
     margin: 0px;
     padding: 0px;
     color: @drawer-foreground;
@@ -82,7 +86,7 @@ element-text {
 
 element-icon {
     enable: true;
-    size: 64px;
+    size: 24px;
     margin: 0px;
     background-color: transparent;
 }

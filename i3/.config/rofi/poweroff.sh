@@ -2,11 +2,11 @@
 
 cd "$(dirname $0)"
 
-POWEROFF=""
-REBOOT=""
-SUSPEND=""
-LOCK=""
-LOGOUT=""
+POWEROFF="󰐥"
+REBOOT="󰜉"
+SUSPEND="󰤄"
+LOCK="󰌾"
+LOGOUT="󰗽"
 
 powermenu_options() {
     echo -en "$POWEROFF\0meta\x1fpoweroff power off shutdown\n"
@@ -23,7 +23,7 @@ assert_confirm() {
 }
 
 powermenu() {
-    powermenu_options | rofi -dmenu -i -theme ~/.config/rofi/poweroff.rasi -hover-select -me-select-entry '' -me-accept-entry MousePrimary
+    powermenu_options | rofi -dpi 1 -dmenu -i -theme ~/.config/rofi/poweroff.rasi -hover-select -me-select-entry '' -me-accept-entry MousePrimary
 }
 
 main() {

@@ -7,12 +7,15 @@ export TERMINAL=alacritty
 xrdb -merge ~/.Xresources
 
 case $HOSTNAME in
-	archstation.local)
+	archstation)
 		xrandr --output DP-4 --primary --left-of DP-0
+		;;
+	frankenmac)
+		xrdb -merge ~/.xresources.d/hdpi.xresources
 		;;
 esac
 
-# gnome-keyring-daemon is managed by systemd, use the SSH socket from GCR
+# gnome-keyring-daemon is managed by systemd
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 
 # Wallpaper and background
