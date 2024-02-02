@@ -1,13 +1,13 @@
 [arch]
-brightnessctl
 bcwc-pcie-git
+brightnessctl
 broadcom-wl-dkms
 cpupower
 facetimehd-firmware
 intel-ucode
+iwd
 libva-intel-driver
 libva-utils
-iwd
 mbpfan-git
 thermald
 vulkan-intel

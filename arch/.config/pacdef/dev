@@ -1,0 +1,9 @@
+[arch]
+bear
+clang
+cmake
+gdb
+go
+lld
+nasm
+rust

@@ -1,6 +1,7 @@
 [arch]
 alacritty
 dunst
+feh
 hsetroot
 i3-wm
 i3lock-fancy-multimonitor
@@ -11,9 +12,12 @@ papirus-icon-theme
 polybar
 rofi
 udiskie
+unclutter
 xclip
 xcursor-openzone
+xdg-utils
 xorg-server
+xorg-xinit
 xorg-xrandr
 xorg-xrdb
 xorg-xset
