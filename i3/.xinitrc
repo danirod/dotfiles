@@ -4,18 +4,21 @@
 # (But still use i3-sensible terminal ;-) ...)
 export TERMINAL=alacritty
 
+# Load general Xresources profile and per-computer Xresources profile
 xrdb -merge ~/.Xresources
+if [ -f $HOME/.xresources.d/$HOSTNAME.xresources ]; then
+	xrdb -merge $HOME/.xresources.d/$HOSTNAME.xresources
+fi
 
 case $HOSTNAME in
 	archstation)
 		xrandr --output DP-4 --primary --left-of DP-0
 		;;
-	frankenmac)
-		xrdb -merge ~/.xresources.d/hdpi.xresources
-		;;
 esac
 
-# gnome-keyring-daemon is managed by systemd
+# gnome-keyring-daemon is managed by systemd. This variable is set here
+# so that all the applications spawned from inside the graphical session
+# have the variable properly set.
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 
 # Wallpaper and background
