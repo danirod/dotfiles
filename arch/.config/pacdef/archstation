@@ -2,6 +2,8 @@
 amd-ucode
 cef-minimal-obs-bin
 grub
+linux-lts
+linux-lts-headers
 ntfs-3g
 nvidia-lts
 obs-captions-plugin-bin

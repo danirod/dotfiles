@@ -8,6 +8,8 @@ intel-ucode
 iwd
 libva-intel-driver
 libva-utils
+linux-lts
+linux-lts-headers
 mbpfan-git
 thermald
 vulkan-intel
