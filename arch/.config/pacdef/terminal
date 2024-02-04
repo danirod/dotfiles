@@ -11,6 +11,8 @@ htop
 httpie
 jq
 neofetch
+neovim
+newsboat
 p7zip
 playerctl
 ripgrep
@@ -21,5 +23,6 @@ stow
 tig
 tmux
 tmuxp
+tootstream-git
 unzip
 vim

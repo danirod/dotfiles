@@ -11,5 +11,6 @@ man-pages
 openssh
 pacdef
 polkit
+python
 udisks2
 yay-bin

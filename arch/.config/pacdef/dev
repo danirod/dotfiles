@@ -2,8 +2,14 @@
 bear
 clang
 cmake
+docker
+docker-compose
+jdk-openjdk
 gdb
 go
 lld
+maven
 nasm
+openjdk-doc
+openjdk-src
 rust
