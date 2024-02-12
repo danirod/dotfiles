@@ -1,0 +1,10 @@
+These are my dotfiles. They contain the configuration of my multiple machines.
+
+The repository is organized in packs, which are meant to be symlinked using GNU
+stow into the home directory. Each pack contains a subset of dotfiles and
+multiple packs may be stowed as an overlay.
+
+The online backup is hosted at https://git.danirod.es/dotfiles/dotfiles. There
+is a GitHub mirror, but it is read only. Please, do not send GitHub pull
+requests. They cannot be accepted due to a GDPR policy and they will be closed
+automatically.
