@@ -11,6 +11,7 @@
 [user]
 	email = dani@danirod.es
 	name = Dani Rodríguez
+	signingkey = 0xE7877B8C964C8E61
 
 [init]
 	defaultBranch = trunk
