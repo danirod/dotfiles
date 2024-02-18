@@ -1,5 +1,8 @@
 [arch]
 amd-ucode
+asciiquarium
+bluez
+bluez-utils
 cef-minimal-obs-bin
 grub
 linux-lts
@@ -7,6 +10,8 @@ linux-lts-headers
 ntfs-3g
 nvidia-lts
 obs-captions-plugin-bin
+obs-multi-rtmp-git
 obs-studio-tytan652
+pulseaudio-bluetooth
 refind
 uxplay

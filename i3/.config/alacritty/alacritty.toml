@@ -1,7 +1,7 @@
 import = ["/home/danirod/.config/alacritty/xterm.toml"]
 
 [env]
-TERM = "xterm"
+TERM = "xterm-256color"
 
 [font]
 size = 10.5
