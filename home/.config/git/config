@@ -20,10 +20,28 @@
 	diffFilter = diff-so-fancy --patch
 
 [diff]
+	algorithm = histogram
 	tool = vimdiff
 	submodule = log
+
+[merge]
+	conflictstyle = zdiff3
+
+[commit]
+	verbose = true
+
+[status]
+	submoduleSummary = true
+
+[log]
+	date = iso-local
+
+[branch]
+	sort = -committerdate
+
+[rerere]
+	enabled = true
 
 [diff "rails_enc"]
 	textconv = rails encrypted:show
 	cachetextconv = false
-
